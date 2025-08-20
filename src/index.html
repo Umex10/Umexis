@@ -79,7 +79,36 @@
       </nav>
     </section>
   </header>
-  <script src="../src/js/main.js"></script>
+  <main class="mx-auto max-w-7xl p-4">
+    <section
+      class="reltive flex flex-col md:flex-row md:py-20 md:px-28 items-center gap-20 rounded-2xl border-white/20 bg-gray-200/90 px-5 py-10 backdrop-blur-sm dark:border dark:bg-[#1C3B5A]/70"
+      aria-label="Items on sale">
+      <div class="flex items-center justify-center md:w-1/2 md:order-2">
+        <img id="item-img" src="" alt="" class="w-72 h-52 object-contain md:w-96 md:h-72" />
+      </div>
+      <div class="flex flex-col gap-7 md:w-1/2">
+        <div class="flex flex-col items-start justify-center gap-2">
+          <p id="item-exclusive" class="text-[18px] text-orange-600"></p>
+          <p id="item-desc" class="text-3xl md:text-4xl md:max-w-lg font-bold text-gray-900 dark:text-gray-100">
+          </p>
+        </div>
+        <div class="flex w-full flex-row items-center justify-start gap-4 text-xl">
+          <button class="rounded-3xl border-solid bg-orange-600 px-9 py-3 font-bold text-white transition-all duration-200 
+         hover:bg-orange-500 hover:shadow-lg 
+         active:bg-orange-700 active:scale-95">
+            Buy now
+          </button>
+          <a href="" class="transition-colors duration-200 hover:text-orange-500 active:text-orange-800">Learn More</a>
+        </div>
+      </div>
+      <div id="slider-dots" class="flex justify-center gap-3 absolute -bottom-8 left-1/2 -translate-x-1/2">
+        <span class="dot w-4 h-4 rounded-full bg-gray-200/90 dark:bg-[#1C3B5A]/70 cursor-pointer transition-colors duration-200 hover:bg-orange-500 active:bg-orange-800"></span>
+        <span class="dot w-4 h-4 rounded-full bg-gray-200/90 dark:bg-[#1C3B5A]/70 cursor-pointer transition-colors duration-200 hover:bg-orange-500 active:bg-orange-800"></span>
+        <span class="dot w-4 h-4 rounded-full bg-gray-200/90 dark:bg-[#1C3B5A]/70 cursor-pointer transition-colors duration-200 hover:bg-orange-500 active:bg-orange-800"></span>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="../src/js/main.js"></script>
 </body>
 
 </html>
