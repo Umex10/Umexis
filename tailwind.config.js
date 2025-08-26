@@ -2,6 +2,10 @@
 module.exports = {
   darkMode: "media",
   content: ["./src/*.html", "./src/js/*.js"],
+   safelist: [
+    "dot-style",
+    "animate-slideIn",
+  ],
   theme: {
     extend: {
       fontFamily: {

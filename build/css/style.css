@@ -607,8 +607,20 @@ video {
   margin-top: 0.25rem;
 }
 
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
 .flex {
   display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
 }
 
 .hidden {
@@ -631,12 +643,24 @@ video {
   height: 2rem;
 }
 
-.h-5 {
-  height: 1.25rem;
+.h-auto {
+  height: auto;
+}
+
+.max-h-40 {
+  max-height: 10rem;
+}
+
+.max-h-80 {
+  max-height: 20rem;
 }
 
 .min-h-screen {
   min-height: 100vh;
+}
+
+.w-1\/4 {
+  width: 25%;
 }
 
 .w-4 {
@@ -655,40 +679,24 @@ video {
   width: 2rem;
 }
 
+.w-auto {
+  width: auto;
+}
+
 .w-full {
   width: 100%;
 }
 
-.w-5 {
-  width: 1.25rem;
-}
-
-.w-1\/2 {
-  width: 50%;
-}
-
-.w-2\/3 {
-  width: 66.666667%;
+.min-w-20 {
+  min-width: 5rem;
 }
 
 .max-w-7xl {
   max-width: 80rem;
 }
 
-.max-w-0\.5 {
-  max-width: 0.125rem;
-}
-
-.max-w-10 {
-  max-width: 2.5rem;
-}
-
-.max-w-40 {
-  max-width: 10rem;
-}
-
-.max-w-56 {
-  max-width: 14rem;
+.max-w-full {
+  max-width: 100%;
 }
 
 .flex-1 {
@@ -720,24 +728,6 @@ video {
 
 .animate-open-menu {
   animation: open-menu 0.5s ease-in-out forwards;
-}
-
-@keyframes slide-span {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.4);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-.animate-slide-span {
-  animation: slide-span 0.3s ease-in-out;
 }
 
 @keyframes slideIn {
@@ -776,6 +766,10 @@ video {
   align-items: center;
 }
 
+.items-baseline {
+  align-items: baseline;
+}
+
 .justify-start {
   justify-content: flex-start;
 }
@@ -788,8 +782,16 @@ video {
   justify-content: space-between;
 }
 
+.gap-1 {
+  gap: 0.25rem;
+}
+
 .gap-1\.5 {
   gap: 0.375rem;
+}
+
+.gap-14 {
+  gap: 3.5rem;
 }
 
 .gap-2 {
@@ -882,14 +884,14 @@ video {
   background-color: rgb(229 231 235 / 0.9);
 }
 
+.bg-gray-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity, 1));
+}
+
 .bg-lightbg {
   --tw-bg-opacity: 1;
   background-color: rgb(253 253 253 / var(--tw-bg-opacity, 1));
-}
-
-.bg-orange-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(251 146 60 / var(--tw-bg-opacity, 1));
 }
 
 .bg-orange-600 {
@@ -902,8 +904,22 @@ video {
      object-fit: contain;
 }
 
+.p-10 {
+  padding: 2.5rem;
+}
+
 .p-4 {
   padding: 1rem;
+}
+
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .px-5 {
@@ -921,14 +937,28 @@ video {
   padding-bottom: 2.5rem;
 }
 
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
 
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
 }
 
 .text-center {
@@ -941,6 +971,11 @@ video {
 
 .font-Roboto {
   font-family: Roboto, sans-serif;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-3xl {
@@ -961,23 +996,27 @@ video {
   font-size: 32px;
 }
 
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
 
-.text-8xl {
-  font-size: 6rem;
-  line-height: 1;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
 .font-bold {
   font-weight: 700;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity, 1));
 }
 
 .text-gray-900 {
@@ -998,6 +1037,10 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.line-through {
+  text-decoration-line: line-through;
 }
 
 .backdrop-blur-md {
@@ -1024,12 +1067,24 @@ video {
   transition-duration: 150ms;
 }
 
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .duration-200 {
   transition-duration: 200ms;
 }
 
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+/* Not needed now but this should ensure that every "section" has the full vh occupied*/
+
 .section-min-height {
-  min-height: calc(100vh - 62px)
+  min-height: calc(100vh - 62px);
 }
 
 /* Cool animation for the hamburger menu */
@@ -1050,6 +1105,91 @@ video {
   --tw-rotate: 720deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   background-color: transparent;
+}
+
+/* Since I used the same classes over and over inside the main.js file, so this wrapper is needed.
+     The !important is also necessary, because there is a issue where tailwind will not use this class on the darkmode */
+
+@keyframes slide-span {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.4);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.dot-style {
+  animation: slide-span 0.3s ease-in-out !important;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(251 146 60 / var(--tw-bg-opacity, 1)) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .dot-style {
+    --tw-bg-opacity: 1 !important;
+    background-color: rgb(251 146 60 / var(--tw-bg-opacity, 1)) !important;
+  }
+}
+
+/* For the variable*/
+
+/* Default star color*/
+
+.star {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity, 1));
+}
+
+/* Filled star + hover classes */
+
+.star-filled {
+  --tw-text-opacity: 1;
+  color: rgb(251 146 60 / var(--tw-text-opacity, 1));
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.group:hover .star-filled {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  text-shadow: 0 0 10px #f97316,0 0 20px #fb923c;
+}
+
+/* filled star, but only with the width (fractional part) + hover classes */
+
+.star-fill-fractional {
+  position: relative;
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.group:hover .star-fill-fractional {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  text-shadow: 0 0 10px #f97316,0 0 20px #fb923c;
+}
+
+/* This provides us with a second layer which sits on top of the first layer. So it appears that one star is fractionally filled! */
+
+.star-fill-fractional::before {
+  content: "★";
+  /* overlay star */
+  position: absolute;
+  --tw-text-opacity: 1;
+  color: rgb(251 146 60 / var(--tw-text-opacity, 1));
+  width: var(--star-width, 50%);
+  /* fills half the star (default value) */
+  overflow: hidden;
 }
 
 .before\:absolute::before {
@@ -1112,16 +1252,6 @@ video {
   position: absolute;
 }
 
-.after\:ml-2::after {
-  content: var(--tw-content);
-  margin-left: 0.5rem;
-}
-
-.after\:inline-block::after {
-  content: var(--tw-content);
-  display: inline-block;
-}
-
 .after\:h-1::after {
   content: var(--tw-content);
   height: 0.25rem;
@@ -1155,24 +1285,6 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
 }
 
-.after\:text-lg::after {
-  content: var(--tw-content);
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
-.after\:text-3xl::after {
-  content: var(--tw-content);
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.after\:text-4xl::after {
-  content: var(--tw-content);
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
 .after\:transition-all::after {
   content: var(--tw-content);
   transition-property: all;
@@ -1190,14 +1302,20 @@ video {
   content: var(--tw-content);
 }
 
-.after\:content-\[\'\2192\'\]::after {
-  --tw-content: '→';
-  content: var(--tw-content);
+.hover\:scale-105:hover {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .hover\:bg-orange-500:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(249 115 22 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:text-gray-900:hover {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity, 1));
 }
 
 .hover\:text-orange-500:hover {
@@ -1292,6 +1410,14 @@ video {
     height: 18rem;
   }
 
+  .md\:max-h-48 {
+    max-height: 12rem;
+  }
+
+  .md\:max-h-\[342px\] {
+    max-height: 342px;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -1308,8 +1434,16 @@ video {
     flex-direction: row;
   }
 
+  .md\:gap-20 {
+    gap: 5rem;
+  }
+
   .md\:gap-3 {
     gap: 0.75rem;
+  }
+
+  .md\:p-0 {
+    padding: 0px;
   }
 
   .md\:px-28 {
@@ -1322,9 +1456,19 @@ video {
     padding-bottom: 5rem;
   }
 
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -1342,11 +1486,6 @@ video {
     background-color: rgb(30 41 59 / var(--tw-bg-opacity, 1));
   }
 
-  .dark\:bg-orange-400 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(251 146 60 / var(--tw-bg-opacity, 1));
-  }
-
   .dark\:bg-white {
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
@@ -1355,6 +1494,11 @@ video {
   .dark\:text-gray-100 {
     --tw-text-opacity: 1;
     color: rgb(243 244 246 / var(--tw-text-opacity, 1));
+  }
+
+  .dark\:text-gray-400 {
+    --tw-text-opacity: 1;
+    color: rgb(156 163 175 / var(--tw-text-opacity, 1));
   }
 
   .dark\:text-white {
@@ -1372,5 +1516,10 @@ video {
     content: var(--tw-content);
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+  }
+
+  .dark\:hover\:text-gray-200:hover {
+    --tw-text-opacity: 1;
+    color: rgb(229 231 235 / var(--tw-text-opacity, 1));
   }
 }

@@ -3,16 +3,47 @@
 @tailwind utilities;
 
 @layer utilities {
- 
-   .section-min-height {
-    min-height: calc(100vh - 62px)
+  /* Not needed now but this should ensure that every "section" has the full vh occupied*/
+  .section-min-height {
+    min-height: calc(100vh - 62px);
   }
 
   /* Cool animation for the hamburger menu */
   .toggle-btn {
-    @apply [&>div::before]:translate-y-0 [&>div::before]:rotate-45 
-    [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 
-    [&>div]:bg-transparent [&>div]:rotate-[720deg]
+    @apply [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div::before]:translate-y-0 [&>div::before]:rotate-45 [&>div]:rotate-[720deg] [&>div]:bg-transparent;
   }
 
+  /* Since I used the same classes over and over inside the main.js file, so this wrapper is needed.
+     The !important is also necessary, because there is a issue where tailwind will not use this class on the darkmode */
+  .dot-style {
+    @apply bg-orange-400 dark:bg-orange-400 animate-slide-span !important;
+  }
+
+   /* For the variable*/
+  .rating-objects {
+    --star-width: 50%;
+  }
+
+  /* Default star color*/
+  .star {
+    @apply text-gray-400;
+  }
+
+  /* Filled star + hover classes */
+  .star-filled {
+    @apply text-orange-400 transition-transform duration-300 ease-in-out group-hover:scale-105 group-hover:[text-shadow:0_0_10px_#f97316,0_0_20px_#fb923c];
+  }
+
+  /* filled star, but only with the width (fractional part) + hover classes */
+  .star-fill-fractional {
+    @apply relative transition-transform duration-300 ease-in-out group-hover:scale-105 group-hover:[text-shadow:0_0_10px_#f97316,0_0_20px_#fb923c];
+  }
+
+  /* This provides us with a second layer which sits on top of the first layer. So it appears that one star is fractionally filled! */
+  .star-fill-fractional::before {
+    content: "★"; /* overlay star */
+    @apply absolute overflow-hidden text-orange-400;
+    width: var(--star-width, 50%); /* fills half the star (default value) */
+    overflow: hidden;
+  }
 }

@@ -1,22 +1,42 @@
+import { renderHeader } from "./header.js";
+
+//? This section will load the header, since the same header is needed in multiple pages
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("header").innerHTML = renderHeader();
+
+  // now hamburger + menu exist in DOM
+  initApp();
+  initSlider();
+});
+
+//? To ensure that hamburger + mobile menu are loaded and their functions
 const initApp = () => {
   const hamburgerButton = document.getElementById("hamburger-button");
   const mobileMenu = document.getElementById("mobile-menu");
 
+  if (!hamburgerButton || !mobileMenu) {
+    console.error("Hamburger button or mobile menu not found");
+    console.log(hamburgerButton);
+    console.log(mobileMenu);
+    return;
+  }
+
   const toggleMenu = () => {
-    mobileMenu.classList.toggle("hidden");
+    // handles showing/hiding
     mobileMenu.classList.toggle("flex");
+
+    mobileMenu.classList.toggle("hidden");
     hamburgerButton.classList.toggle("toggle-btn");
-    document.body.classList.toggle("overflow-hidden"); //disables scroll-function inside menu
+
+    //disables scroll-function inside menu
+    document.body.classList.toggle("overflow-hidden");
   };
 
   hamburgerButton.addEventListener("click", toggleMenu);
   mobileMenu.addEventListener("click", toggleMenu);
 };
 
-// crucial to ensure that hamburger as well as the mobile menu run perfectly, without loss of data.
-document.addEventListener("DOMContentLoaded", initApp);
-
-// to fetch a specific item or the whole item list
+//? To fetch a specific item or the whole item list
 async function fetchAPI(apiURL) {
   const reply = await fetch(apiURL);
 
@@ -26,6 +46,8 @@ async function fetchAPI(apiURL) {
 
   return await reply.json();
 }
+
+//? Slider mechanism to see the most recent items which are on sale from now on
 
 async function initSlider() {
   //to Initialize the slides
@@ -47,77 +69,81 @@ async function initSlider() {
 
   let current = 0;
 
+  //The mechanism below will take care of the animation and hover classes.
+
   const dotsNodeList = document.querySelectorAll("#slider-dots .dot");
   const dotsArray = Array.from(dotsNodeList);
+
+  // Slide functions
+
+  const updateSlide = (index) => {
+    dotsArray[current].classList.remove("dot-style");
+    current = index;
+    displayItem(items[current]);
+    dotsArray[current].classList.add("dot-style");
+  };
+
+  const specificSlide = (index) => updateSlide(index);
+
+  const nextSlide = () => updateSlide((current + 1) % items.length);
+
+  const previousSlide = () =>
+    updateSlide((current - 1 + items.length) % items.length);
+
+  // Event Listeners
+
   dotsArray.forEach((element, index) => {
-    element.addEventListener("click", (event) => {
-      dotsArray[current].classList.remove(
-        "bg-orange-400",
-        "dark:bg-orange-400",
-        "animate-slide-span",
-      );
+    element.addEventListener("click", () => specificSlide(index));
 
-      current = index;
-      displayItem(items[current]);
-
-      dotsArray[current].classList.add(
-        "bg-orange-400",
-        "dark:bg-orange-400",
-        "animate-slide-span",
-      );
+    element.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowRight") {
+        nextSlide();
+      } else if (event.key === "ArrowLeft") {
+        previousSlide();
+      } else if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        specificSlide(index);
+      }
     });
   });
 
   displayItem(items[current]);
-  dotsArray[current].classList.add(
-    "bg-orange-400",
-    "dark:bg-orange-400",
-    "animate-slide-span",
-  );
+  dotsArray[current].classList.add("dot-style");
 
-  //? Items slider...
-  setInterval(() => {
-    dotsArray[current].classList.remove(
-      "bg-orange-400",
-      "dark:bg-orange-400",
-      "animate-slide-span",
-    );
-    current = (current + 1) % items.length;
-    displayItem(items[current]);
-    dotsArray[current].classList.add(
-      "bg-orange-400",
-      "dark:bg-orange-400",
-      "animate-slide-span",
-    );
-  }, 5000);
+  // Items slider...
+  setInterval(nextSlide, 5000);
+
+  //? Learn more about the item mechanism to ensure the correct ID of the item will be loaded!
+
+  const itemLearnMore = document.getElementById("item-learn-more");
+  itemLearnMore.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.location.href = `item-detail.html?id=${items[current].id}`;
+  });
 }
 
 //? To display a specific item at the current slide-index
 
 function displayItem(item) {
-  const { image: img } = item;
+  const img = document.getElementById("item-img");
+  const exclusiveText = document.getElementById("item-exclusive");
+  const desc = document.getElementById("item-desc");
 
-  const itemImg = document.getElementById("item-img");
-  const itemExclusiveText = document.getElementById("item-exclusive");
-  const itemDesc = document.getElementById("item-desc");
-
-  itemImg.src = img;
-  itemImg.alt = `Item: ${item.title}`;
-  itemExclusiveText.textContent = item.exclusive;
-  itemDesc.textContent = item.desc;
+  img.src = item.image;
+  img.alt = `Title of the item (Image): ${item.title}`;
+  exclusiveText.textContent = item.exclusive;
+  desc.textContent = item.desc;
 
   //animation mechanism
-  itemImg.classList.remove("animate-slideIn");
-  void itemImg.offsetWidth;
-  itemImg.classList.add("animate-slideIn");
+  img.classList.remove("animate-slideIn");
+  void img.offsetWidth;
+  img.classList.add("animate-slideIn");
 
-  itemExclusiveText.classList.remove("animate-slideIn");
-  void itemExclusiveText.offsetWidth;
-  itemExclusiveText.classList.add("animate-slideIn");
+  exclusiveText.classList.remove("animate-slideIn");
+  void exclusiveText.offsetWidth;
+  exclusiveText.classList.add("animate-slideIn");
 
-  itemDesc.classList.remove("animate-slideIn");
-  void itemDesc.offsetWidth;
-  itemDesc.classList.add("animate-slideIn");
+  desc.classList.remove("animate-slideIn");
+  void desc.offsetWidth;
+  desc.classList.add("animate-slideIn");
 }
-
-initSlider();

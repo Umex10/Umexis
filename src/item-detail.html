@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="title"></title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../build/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png" />
+  <link rel="manifest" href="../favicon/site.webmanifest" />
+</head>
+
+<body class="min-h-screen bg-lightbg font-Roboto dark:bg-darkbg dark:text-white">
+  <!-- Header is injected dynamically (see header.js) -->
+  <header id="header" class="sticky top-0 z-10 border-b-2 border-gray-300 bg-lightbg dark:bg-darkbg"></header>
+
+  <main class="mx-auto max-w-7xl p-4">
+    <!-- Item detail page -->
+    <article class="flex w-full flex-col gap-3 md:flex-row md:gap-20">
+      <!-- Item images (main + thumbnails) -->
+      <section class="flex flex-col items-center gap-3 p-10 md:w-1/2 md:p-0"  role="region" aria-label="Item images and thumbnails">
+        <!--Wrapper-->
+        <div class="relative">
+          <!-- Main Item image -->
+          <div
+            class="cursor-pointer rounded-2xl border-white/20 bg-gray-200/90 px-12 py-8 backdrop-blur-sm transition-transform duration-300 hover:scale-105 dark:border dark:bg-[#1C3B5A]/70">
+            <img id="item-big-img" src="" alt=""
+              class="mx-auto h-auto max-h-80 w-auto min-w-20 max-w-full object-contain md:max-h-[342px]" />
+          </div>
+
+          <!-- Thumbnail / alternate Item image -->
+          <div
+            class="mt-3 inline-block w-1/4 cursor-pointer rounded-2xl border-white/20 bg-gray-200/90 px-3 py-2 backdrop-blur-sm transition-transform duration-300 hover:scale-105 dark:border dark:bg-[#1C3B5A]/70">
+            <img id="item-small-img" src="" alt="" class="mx-auto h-auto max-h-40 object-contain md:max-h-48" />
+          </div>
+        </div>
+      </section>
+      <!-- Wrapper for information of the item -->
+      <div class="px-5 md:w-1/2">
+        <!-- Title, rating, description and price -->
+        <section class="flex flex-col gap-3 border-b-2 border-gray-300 pb-4" role="region" aria-label="Item details">
+          <h2 id="item-title" class="text-3xl font-bold text-gray-900 md:max-w-lg md:text-4xl dark:text-gray-100"></h2>
+          <!-- Star - Rating objects -->
+          <div class="group flex flex-row items-baseline gap-2 transition-colors duration-200">
+            <div id="color-objects" class="relative flex gap-1 text-xl md:text-2xl">
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+            </div>
+
+            <span id="item-rating"
+              class="text-lg text-gray-500 transition-colors duration-200 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200"></span>
+            <span
+              class="text-lg text-gray-500 transition-colors duration-200 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">•</span>
+            <span id="item-sold"
+              class="text-lg text-gray-500 transition-colors duration-200 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200"></span>
+          </div>
+          <!-- Item description -->
+          <p id="item-desc"
+            class="text-gray-500 transition-colors duration-200 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
+          </p>
+          <!-- Price and discount -->
+          <div class="inline-flex items-baseline gap-2 py-3">
+            <p id="item-new-money"
+              class="text-2xl font-bold transition-colors duration-200 hover:text-orange-500 dark:text-gray-100"></p>
+            <p id="item-last-money"
+              class="text-gray-500 line-through transition-colors duration-200 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
+            </p>
+          </div>
+        </section>
+        <!-- Item attributes (brand, color, category) -->
+        <section class="flex flex-row gap-14" role="region" aria-label="Item attributes">
+          <div class="py-5">
+            <p class="font-semibold">Brand</p>
+            <p class="font-semibold">Color</p>
+            <p class="font-semibold">Category</p>
+          </div>
+          <div
+            class="py-5 text-gray-500 transition-colors duration-200 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
+            <p id="item-brand">Generic</p>
+            <p id="item-color">Multi</p>
+            <p id="item-category">Handy</p>
+          </div>
+        </section>
+        <!-- Action Buttons -->
+        <section class="flex flex-row items-center gap-2 text-lg md:text-xl" role="region" aria-label="Purchase options">
+          <button id="cart"
+            class="w-full overflow-hidden rounded-lg bg-gray-400 py-3 font-semibold text-white transition-all duration-200 hover:bg-orange-500 hover:shadow-lg active:scale-95 active:bg-orange-700">
+            Add to Cart
+          </button>
+          <button id=" buy"
+            class="w-full overflow-hidden rounded-lg bg-orange-600 py-3 font-semibold text-white transition-all duration-200 hover:bg-orange-500 hover:shadow-lg active:scale-95 active:bg-orange-700">
+            Buy now
+          </button>
+        </section>
+      </div>
+    </article>
+  </main>
+  <!-- Item details logic -->
+  <script type="module" src="js/detail.js"></script>
+</body>
+
+</html>

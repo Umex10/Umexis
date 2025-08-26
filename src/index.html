@@ -5,10 +5,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Umexis</title>
+  <!-- Styles -->
   <link rel="stylesheet" href="../build/css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet" />
 
+  <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png" />
@@ -16,99 +18,51 @@
 </head>
 
 <body class="min-h-screen bg-lightbg font-Roboto dark:bg-darkbg dark:text-white">
-  <header class="sticky top-0 z-10 border-b-2 border-gray-300">
-    <section class="mx-auto flex max-w-7xl flex-row items-center justify-between p-4">
-      <!-- Logo -->
-      <h1 class="group cursor-pointer text-[32px] font-bold">
-        <span
-          class="font-Bitcount text-4xl text-orange-400 transition-colors duration-200 active:text-orange-800 group-hover:text-orange-500">U</span>mexis
-      </h1>
-
-      <!-- Nav Bar (Desk only) -->
-      <nav class="hidden flex-1 justify-center space-x-8 text-xl md:flex" aria-label="main">
-        <a href="#" class="transition-colors duration-200 hover:text-orange-500 active:text-orange-800">Home</a>
-        <a href="#" class="transition-colors duration-200 hover:text-orange-500 active:text-orange-800">Shop</a>
-        <a href="#" class="transition-colors duration-200 hover:text-orange-500 active:text-orange-800">About Us</a>
-        <a href="#" class="transition-colors duration-200 hover:text-orange-500 active:text-orange-800">Contact</a>
-      </nav>
-
-      <!-- Right Buttons -->
-      <div class="ml-auto flex flex-row items-center gap-1.5 md:gap-3">
-        <button id="hamburger-button" class="group relative h-8 w-8 cursor-pointer text-3xl md:hidden">
-          <!-- Hamburger -->
-          <div
-            class="absolute top-4 -mt-0.5 h-1 w-7 rounded bg-black before:absolute before:h-1 before:w-7 before:-translate-x-3.5 before:-translate-y-2.5 before:rounded before:bg-black before:transition-all before:duration-500 before:content-[''] after:absolute after:h-1 after:w-7 after:-translate-x-3.5 after:translate-y-2.5 after:rounded after:bg-black after:transition-all after:duration-500 after:content-[''] active:bg-orange-800 active:before:bg-orange-800 active:after:bg-orange-800 group-hover:bg-orange-500 group-hover:before:bg-orange-500 group-hover:after:bg-orange-500 dark:bg-white before:dark:bg-white after:dark:bg-white">
-          </div>
-        </button>
-        <!-- Lupe -->
-        <button class="group">
-          <svg xmlns="http://www.w3.org/2000/svg"
-            class="h-8 w-8 transition-colors duration-200 group-hover:text-orange-500 group-active:text-orange-800"
-            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M21 21l-4.35-4.35m1.1-5.65a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
-        </button>
-        <!-- Account -->
-        <button class="group flex flex-row items-center">
-          <svg xmlns="http://www.w3.org/2000/svg"
-            class="h-8 w-8 transition-colors duration-200 group-hover:text-orange-500 group-active:text-orange-800"
-            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM6 20v-2a6 6 0 0112 0v2" />
-          </svg>
-          <span
-            class="hidden text-xl transition-colors duration-200 group-hover:text-orange-500 group-active:text-orange-800 md:inline">Account</span>
-        </button>
-      </div>
-    </section>
-    <section id="mobile-menu"
-      class="section-min-height absolute top-full mt-1 hidden w-full origin-top animate-open-menu flex-col items-center rounded-lg border border-white/20 bg-black/50 backdrop-blur-md">
-      <!-- Nav Bar (Mobile only) -->
-      <nav class="flex w-full flex-col items-center justify-center space-y-10 py-8 text-4xl text-white"
-        aria-label="mobile">
-        <a href=""
-          class="w-full text-center transition-colors duration-200 hover:text-orange-500 active:text-orange-800">Home</a>
-        <a href=""
-          class="w-full text-center transition-colors duration-200 hover:text-orange-500 active:text-orange-800">Shop</a>
-        <a href=""
-          class="w-full text-center transition-colors duration-200 hover:text-orange-500 active:text-orange-800">About
-          Us</a>
-        <a href=""
-          class="w-full text-center transition-colors duration-200 hover:text-orange-500 active:text-orange-800">Contact</a>
-      </nav>
-    </section>
-  </header>
+  <!-- Header is injected dynamically (see header.js) -->
+  <header id="header" class="sticky top-0 z-10 border-b-2 border-gray-300"></header>
   <main class="mx-auto max-w-7xl p-4">
+    <!-- Slider -->
     <section
-      class="reltive flex flex-col md:flex-row md:py-20 md:px-28 items-center gap-20 rounded-2xl border-white/20 bg-gray-200/90 px-5 py-10 backdrop-blur-sm dark:border dark:bg-[#1C3B5A]/70"
-      aria-label="Items on sale">
-      <div class="flex items-center justify-center md:w-1/2 md:order-2">
-        <img id="item-img" src="" alt="" class="w-72 h-52 object-contain md:w-96 md:h-72" />
+      class="reltive flex flex-col items-center gap-20 rounded-2xl border-white/20 bg-gray-200/90 px-5 py-10 backdrop-blur-sm md:flex-row md:px-28 md:py-20 dark:border dark:bg-[#1C3B5A]/70"
+      role="region" aria-label="Items on sale">
+      <!-- Main Image -->
+      <div class="flex items-center justify-center md:order-2 md:w-1/2">
+        <img id="item-img" src="" alt="" class="h-52 w-72 object-contain md:h-72 md:w-96" />
       </div>
       <div class="flex flex-col gap-7 md:w-1/2">
+        <!-- Item description and sale-text-->
         <div class="flex flex-col items-start justify-center gap-2">
           <p id="item-exclusive" class="text-[18px] text-orange-600"></p>
-          <p id="item-desc" class="text-3xl md:text-4xl md:max-w-lg font-bold text-gray-900 dark:text-gray-100">
-          </p>
+
+          <h2 id="item-desc" class="text-3xl font-bold text-gray-900 md:max-w-lg md:text-4xl dark:text-gray-100"></h2>
         </div>
+        <!-- Action Button/link -->
         <div class="flex w-full flex-row items-center justify-start gap-4 text-xl">
-          <button class="rounded-3xl border-solid bg-orange-600 px-9 py-3 font-bold text-white transition-all duration-200 
-         hover:bg-orange-500 hover:shadow-lg 
-         active:bg-orange-700 active:scale-95">
+          <button
+            class="rounded-3xl border-solid bg-orange-600 px-9 py-3 font-bold text-white transition-all duration-200 hover:bg-orange-500 hover:shadow-lg active:scale-95 active:bg-orange-700">
             Buy now
           </button>
-          <a href="" class="transition-colors duration-200 hover:text-orange-500 active:text-orange-800">Learn More</a>
+          <a id="item-learn-more" href="#"
+            class="transition-colors duration-200 hover:text-orange-500 active:text-orange-800" tabindex="0">Learn
+            More</a>
         </div>
       </div>
-      <div id="slider-dots" class="flex justify-center gap-3 absolute -bottom-8 left-1/2 -translate-x-1/2">
-        <span class="dot w-4 h-4 rounded-full bg-gray-200/90 dark:bg-[#1C3B5A]/70 cursor-pointer transition-colors duration-200 hover:bg-orange-500 active:bg-orange-800"></span>
-        <span class="dot w-4 h-4 rounded-full bg-gray-200/90 dark:bg-[#1C3B5A]/70 cursor-pointer transition-colors duration-200 hover:bg-orange-500 active:bg-orange-800"></span>
-        <span class="dot w-4 h-4 rounded-full bg-gray-200/90 dark:bg-[#1C3B5A]/70 cursor-pointer transition-colors duration-200 hover:bg-orange-500 active:bg-orange-800"></span>
+      <!-- Dots to show the current index of the slide -->
+      <div id="slider-dots" class="absolute -bottom-8 left-1/2 flex -translate-x-1/2 justify-center gap-3">
+        <span
+          class="dot h-4 w-4 cursor-pointer rounded-full bg-gray-200/90 transition-colors duration-200 hover:bg-orange-500 active:bg-orange-800 dark:bg-[#1C3B5A]/70"
+          role="button" aria-label="Slide 1" tabindex="0"></span>
+        <span
+          class="dot h-4 w-4 cursor-pointer rounded-full bg-gray-200/90 transition-colors duration-200 hover:bg-orange-500 active:bg-orange-800 dark:bg-[#1C3B5A]/70"
+          role="button" aria-label="Slide 2" tabindex="0"></span>
+        <span
+          class="dot h-4 w-4 cursor-pointer rounded-full bg-gray-200/90 transition-colors duration-200 hover:bg-orange-500 active:bg-orange-800 dark:bg-[#1C3B5A]/70"
+          role="button" aria-label="Slide 3" tabindex="0"></span>
       </div>
     </section>
   </main>
-  <script type="module" src="../src/js/main.js"></script>
+  <!-- Slide logic -->
+  <script type="module" src="js/main.js"></script>
 </body>
 
 </html>
