@@ -19,11 +19,11 @@
 
 <body class="min-h-screen bg-lightbg font-Roboto dark:bg-darkbg dark:text-white">
   <!-- Header is injected dynamically (see header.js) -->
-  <header id="header" class="sticky top-0 z-10 border-b-2 border-gray-300"></header>
+  <header id="header" class="sticky top-0 z-10 border-b-2 border-gray-300 bg-lightbg dark:bg-darkbg"></header>
   <main class="mx-auto max-w-7xl p-4">
     <!-- Slider -->
     <section
-      class="reltive flex flex-col items-center gap-20 rounded-2xl border-white/20 bg-gray-200/90 px-5 py-10 backdrop-blur-sm md:flex-row md:px-28 md:py-20 dark:border dark:bg-[#1C3B5A]/70"
+      class="relative flex flex-col items-center gap-20 rounded-2xl border-white/20 bg-gray-200/90 px-5 py-10 backdrop-blur-sm md:flex-row md:px-28 md:py-20 dark:border dark:bg-[#1C3B5A]/70"
       role="region" aria-label="Items on sale">
       <!-- Main Image -->
       <div class="flex items-center justify-center md:order-2 md:w-1/2">
@@ -60,9 +60,29 @@
           role="button" aria-label="Slide 3" tabindex="0"></span>
       </div>
     </section>
+    <section class="mt-16" role="region" aria-label="Featured Products">
+      <h2 class="mb-6 text-2xl font-bold">Featured Products</h2>
+      <!-- Will only be displayed if there are no items -->
+      <p id="no-items" class="hidden text-center text-3xl">
+        There will be new items soon!
+      </p>
+      <!-- Main Grid-layout -->
+      <div id="grid" class="grid w-full grid-cols-2 gap-4 sm:grid-cols-[repeat(auto-fit,minmax(250px,1fr))]"></div>
+      <!-- User can either click on see more button (+5 items shown) or see all, which shows all available items -->
+      <div class="mx-auto mt-6 flex w-full max-w-md flex-row justify-center gap-5">
+        <button id="see-more-button"
+          class="border border-gray-200 px-10 py-2 font-semibold text-gray-400 hover:bg-gray-50 md:text-xl dark:border-white/20 hover:dark:bg-[#1C3B5A]/70">
+          See more
+        </button>
+        <button id="see-all-button"
+          class="hidden flex-1 border border-gray-200 py-2 font-semibold text-gray-400 hover:bg-gray-50 md:text-xl dark:border-white/20 hover:dark:bg-[#1C3B5A]/70">
+          See all
+        </button>
+      </div>
+    </section>
   </main>
   <!-- Slide logic -->
-  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/pages/main.js"></script>
 </body>
 
 </html>

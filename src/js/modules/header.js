@@ -1,3 +1,5 @@
+//? Main header on each website
+
 export function renderHeader() {
   return `
    

@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: "media",
-  content: ["./src/*.html", "./src/js/*.js"],
+  content: ["./src/*.html", "./src/js/**/*.js"],
    safelist: [
     "dot-style",
     "animate-slideIn",
@@ -39,5 +39,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: ["prettier-plugin-tailwindcss"],
 };

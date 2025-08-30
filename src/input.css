@@ -16,10 +16,10 @@
   /* Since I used the same classes over and over inside the main.js file, so this wrapper is needed.
      The !important is also necessary, because there is a issue where tailwind will not use this class on the darkmode */
   .dot-style {
-    @apply bg-orange-400 dark:bg-orange-400 animate-slide-span !important;
+    @apply animate-slide-span bg-orange-400 dark:bg-orange-400 !important;
   }
 
-   /* For the variable*/
+  /* For the variable*/
   .rating-objects {
     --star-width: 50%;
   }
