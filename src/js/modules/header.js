@@ -5,16 +5,17 @@ export function renderHeader() {
    
     <section class="mx-auto flex max-w-7xl flex-row items-center justify-between p-4"   role="banner" aria-label="Site header">
       <!-- Logo -->
+      <a href="index.html">
       <h1 class="group cursor-pointer text-[32px] font-bold"  tabindex="0">
         <span
           class="font-Bitcount text-4xl text-orange-400 transition-colors duration-200 active:text-orange-800 group-hover:text-orange-500">U</span>mexis
-      </h1>
+      </h1><a/>
 
       <!-- Nav Bar (Desk only) -->
       <nav class="hidden flex-1 justify-center space-x-8 text-xl md:flex" role="navigation" aria-label="Main navigation">
-        <a href="#" class="transition-colors duration-200 hover:text-orange-500 active:text-orange-800"  tabindex="0">Home</a>
-        <a href="#" class="transition-colors duration-200 hover:text-orange-500 active:text-orange-800"  tabindex="0">Shop</a>
-        <a href="#" class="transition-colors duration-200 hover:text-orange-500 active:text-orange-800"  tabindex="0">About Us</a>
+        <a href="index.html" class="transition-colors duration-200 hover:text-orange-500 active:text-orange-800"  tabindex="0">Home</a>
+        <a href="item-all.html" class="transition-colors duration-200 hover:text-orange-500 active:text-orange-800"  tabindex="0">Shop</a>
+        <a href="about.html" class="transition-colors duration-200 hover:text-orange-500 active:text-orange-800"  tabindex="0">About Us</a>
         <a href="#" class="transition-colors duration-200 hover:text-orange-500 active:text-orange-800"  tabindex="0">Contact</a>
       </nav>
 
@@ -53,11 +54,11 @@ export function renderHeader() {
       <!-- Nav Bar (Mobile only) -->
       <nav class="flex w-full flex-col items-center justify-center space-y-10 py-8 text-4xl text-white"
         role="navigation" aria-label="Mobile menu navigation">
-        <a href=""
+        <a href="index.html"
           class="w-full text-center transition-colors duration-200 hover:text-orange-500 active:text-orange-800">Home</a>
-        <a href=""
+        <a href="item-all.html"
           class="w-full text-center transition-colors duration-200 hover:text-orange-500 active:text-orange-800">Shop</a>
-        <a href=""
+        <a href="about.html"
           class="w-full text-center transition-colors duration-200 hover:text-orange-500 active:text-orange-800">About
           Us</a>
         <a href=""
