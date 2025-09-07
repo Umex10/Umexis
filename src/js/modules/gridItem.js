@@ -10,7 +10,7 @@ export async function gridItems() {
     );
     return gridArray;
   } catch (error) {
-    console.error("Couldn't fetch all items.");
+    console.error("Couldn't fetch all items: ", error);
     return [];
   }
 }
@@ -39,7 +39,7 @@ export async function addGridItem(amountFrom, amountTo) {
       calculateRating(item.rating.rate, wrapper);
     });
   } catch (error) {
-    console.error("Couldn't add item to given grid-layout.");
+    console.error("Couldn't add item to given grid-layout: ", error);
   }
 
   const buttonHeart = document.querySelectorAll(".button-heart");
@@ -68,7 +68,7 @@ export async function addGridItem(amountFrom, amountTo) {
   const gridItem = document.querySelectorAll(".grid-item");
 
   gridItem.forEach((element) => {
-    element.addEventListener("click", (event) => {
+    element.addEventListener("click", () => {
       const itemID = element.dataset.id;
       window.location.href = `item-detail.html?id=${itemID}`;
     });
@@ -127,9 +127,9 @@ export function createGridItem(item) {
   </div>
 
   <div class="flex flex-row justify-between items-baseline gap-2 py-3 -mt-5">
-    <p id="item-new-money"
+    <h4 id="item-new-money"
       class="flex-1 text-lg font-bold">$${item.price}
-    </p>
+    </h4>
     <button class="hidden px-4 py-2 md:inline-block border rounded-xl border-gray-200 dark:border-white/20 text-gray-400 hover:bg-gray-50 hover:dark:bg-[#1C3B5A]/70">Buy now</button>
   </div>
 </div>

@@ -25,8 +25,12 @@ async function initializeItem(itemID) {
       `https://fakestoreapi.com/products/${itemID}`,
     );
   } catch (error) {
-    console.error("Couldn't catch a specific item from the API.");
+    console.error("Couldn't catch a specific item from the API: ", error);
   }
+
+  // Setting title of tab
+  const tabTitle = document.getElementById("title");
+  tabTitle.textContent = item.title;
 
   // Setting main and thunbnail images
 

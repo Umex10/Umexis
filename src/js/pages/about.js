@@ -1,4 +1,3 @@
-import * as fetchModule from "../modules/fetch.js";
 import { renderHeader } from "../modules/header.js";
 import { initApp } from "../modules/initApp.js";
 
@@ -66,7 +65,7 @@ const dotsArray = Array.from(dotsNodeList);
 // Our Container for the mobile slide section
 const scrollContainer = document.querySelector(".scroll-container");
 
-scrollContainer.addEventListener("scroll", (event) => {
+scrollContainer.addEventListener("scroll", () => {
   // This will hold the number, how "far" we have scrolled to the right
   const scrollLeft = scrollContainer.scrollLeft;
 

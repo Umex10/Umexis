@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title id="title"></title>
+  <title id="title">Umexis - Details of item</title>
 
   <!-- Styles -->
   <link rel="stylesheet" href="../build/css/style.css" />
@@ -29,18 +29,18 @@
       <section class="flex flex-col items-center gap-3 p-10 md:w-1/2 md:p-0" role="region"
         aria-label="Item images and thumbnails">
         <!--Wrapper-->
-        <div class="relative">
+        <div class="w-full relative">
           <!-- Main Item image -->
           <div
             class="cursor-pointer rounded-2xl border-white/20 bg-gray-200/90 px-12 py-8 backdrop-blur-sm transition-transform duration-300 hover:scale-105 dark:border dark:bg-[#1C3B5A]/70">
             <img id="item-big-img" src="" alt=""
-              class="mx-auto h-auto max-h-80 w-auto min-w-20 max-w-full object-contain md:max-h-[342px]" />
+              class="mx-auto min-w-20 max-w-full object-contain max-h-[342px]" />
           </div>
 
           <!-- Thumbnail / alternate Item image -->
           <div
             class="mt-3 inline-block w-1/4 cursor-pointer rounded-2xl border-white/20 bg-gray-200/90 px-3 py-2 backdrop-blur-sm transition-transform duration-300 hover:scale-105 dark:border dark:bg-[#1C3B5A]/70">
-            <img id="item-small-img" src="" alt="" class="mx-auto h-auto max-h-40 object-contain md:max-h-48" />
+            <img id="item-small-img" src="" alt="" class="mx-auto w-full max-h-40 object-contain md:max-h-48" />
           </div>
         </div>
       </section>
@@ -100,7 +100,7 @@
             class="w-full overflow-hidden rounded-lg bg-gray-400 py-3 font-semibold text-white transition-all duration-200 hover:bg-orange-500 hover:shadow-lg active:scale-95 active:bg-orange-700">
             Add to Cart
           </button>
-          <button id=" buy"
+          <button id="buy"
             class="w-full overflow-hidden rounded-lg bg-orange-600 py-3 font-semibold text-white transition-all duration-200 hover:bg-orange-500 hover:shadow-lg active:scale-95 active:bg-orange-700">
             Buy now
           </button>

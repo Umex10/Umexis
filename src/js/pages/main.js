@@ -26,7 +26,7 @@ async function initSlider() {
       fetchModule.fetchAPI("https://fakestoreapi.com/products/10"),
     ]);
   } catch (error) {
-    console.error("Slider couldn't be initialized!");
+    console.error("Slider couldn't be initialized: ", error);
     return;
   }
 
@@ -163,7 +163,7 @@ function showMoreAllButtons() {
 
   //EventListeners for seeMore and seeAll
 
-  seeMore.addEventListener("click", (event) => {
+  seeMore.addEventListener("click", () => {
     clickCount++;
 
     if (amountItems == 5) {
@@ -184,7 +184,7 @@ function showMoreAllButtons() {
     }
   });
 
-  seeAll.addEventListener("click", (event) => {
+  seeAll.addEventListener("click", () => {
     window.location.href = `item-all.html`;
   });
 }
