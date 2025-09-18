@@ -48,6 +48,11 @@ module.exports = {
         'size-200': '200% 200%',
         'size-600': '600% 600%',
       },
+      screens: {
+        '3xl': '1920px',   // Full HD
+        '4xl': '2560px',   // Ultra-Wide
+        '5xl': '3840px',   // 4K
+      },
     },
   },
   plugins: ["prettier-plugin-tailwindcss"],
