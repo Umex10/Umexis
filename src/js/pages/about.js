@@ -1,88 +1,40 @@
+import { renderFooter } from "../modules/footer.js";
 import { renderHeader } from "../modules/header.js";
 import { initApp } from "../modules/initApp.js";
-
+import { lightSwitch } from "../modules/lightSwitch.js";
 //? This section will load the header, since the same header is needed in multiple pages
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("header").innerHTML = renderHeader();
+  const header = document.getElementById("header");
+  const footer = document.getElementById("footer");
 
-  // Now hamburger + menu exist in DOM
+  if (header) header.innerHTML = renderHeader();
+  if (footer) footer.innerHTML = renderFooter();
 
   initApp();
+  lightSwitch();
+  backToTop();
+  initCarousel();
 });
 
-//? Manaully enabling scrolling
+//? Since about.html is using a snap scroll behauvior, we need a function which will scroll to id: main
+function backToTop() {
+  const main = document.getElementById("main");
+  document.querySelector(".back-to-top").addEventListener("click", (event) => {
+    event.preventDefault();
+    main.style.scrollSnapType = "none";
+    main.scrollTo({ top: 0, behavior: "smooth" });
 
-// Makes the scrolling behaving "smoother" when working with snap mechanism (stackoverflow)
-// This will also replace the default scroll behaviour by the browser
-const sections = document.querySelectorAll("main section");
-
-// Current section
-let currentSection = 0;
-let isScrolling = false;
-
-function scrollToSection(index) {
-  if (index < 0 || index >= sections.length) return;
-  isScrolling = true;
-  sections[index].scrollIntoView({
-    behavior: "smooth",
-    block: "start",
+    // Restore scroll snap after scroll finishes
+    const onScrollEnd = () => {
+      main.style.scrollSnapType = "y mandatory";
+      main.removeEventListener("scroll", onScrollEnd);
+    };
+    main.addEventListener("scroll", onScrollEnd);
   });
-  setTimeout(() => {
-    isScrolling = false;
-    currentSection = index;
-  }, 800);
 }
 
-window.addEventListener(
-  "wheel",
-  (e) => {
-    if (isScrolling) return;
-    e.preventDefault();
-
-    // To know if the user is scrolling down/ up
-    if (e.deltaY > 0) scrollToSection(currentSection + 1);
-    else if (e.deltaY < 0) scrollToSection(currentSection - 1);
-  },
-  { passive: false },
-);
-
-// Keyevents
-window.addEventListener("keydown", (e) => {
-  if (isScrolling) return;
-  if (e.key === "ArrowDown") scrollToSection(currentSection + 1);
-  if (e.key === "ArrowUp") scrollToSection(currentSection - 1);
-});
-
-//? Dot mechanism
-
-// Keeps track of current dot
-let current = 0;
-
-const dotsNodeList = document.querySelectorAll("#slider-dots .dot");
-const dotsArray = Array.from(dotsNodeList);
-
-// Our Container for the mobile slide section
-const scrollContainer = document.querySelector(".scroll-container");
-
-scrollContainer.addEventListener("scroll", () => {
-  // This will hold the number, how "far" we have scrolled to the right
-  const scrollLeft = scrollContainer.scrollLeft;
-
-  // This will hold the width of the current slide. Our slide takes 100% so clientWidth would be 100vw.
-  const scrollWidth = scrollContainer.clientWidth;
-
-  // To calculate the current Slide
-  let index = Math.round(scrollLeft / scrollWidth);
-
-  if (index !== current) {
-    dotsArray[current].classList.remove("dot-style");
-    current = index;
-    dotsArray[current].classList.add("dot-style");
-  }
-});
-
-//? Carousel Section mechanism
+//? Carousel
 
 // Some sample data to fill in info section on PC, for mobile it's done directly from html
 const tabInfo = {
@@ -114,87 +66,124 @@ const tabInfo = {
   },
 };
 
-//! Mobile slides
+function initCarousel() {
+  //! Mobile slides
+  mobileCarousel();
 
-// To know if the clicked div is the same as the click before
-let longTextSecond;
+  //! Desktop carousel
+  desktopCarousel();
+}
 
-scrollContainer.addEventListener("click", (event) => {
-  const currentDiv = event.target.closest(".snap-start");
-  const longText = currentDiv.querySelector(".long-text");
+function mobileCarousel() {
+  // Keeps track of current dot
+  let current = 0;
 
-  if (longTextSecond === longText) {
-    longText.classList.toggle("hidden");
-    longText.classList.toggle("flex");
-    return;
-  }
+  const dotsNodeList = document.querySelectorAll("#slider-dots .dot");
+  const dotsArray = Array.from(dotsNodeList);
 
-  if (longTextSecond) {
-    longTextSecond.classList.replace("flex", "hidden");
-  }
+  // Our Container for the mobile slide section
+  const scrollContainer = document.querySelector(".scroll-container");
 
-  const textDiv = longText.querySelector("p");
-  const key = currentDiv.dataset.key;
-  textDiv.textContent = tabInfo[key].desc;
+  scrollContainer.addEventListener("scroll", () => {
+    // This will hold the number, how "far" we have scrolled to the right
+    const scrollLeft = scrollContainer.scrollLeft;
 
-  longText.classList.replace("hidden", "flex");
-  longTextSecond = longText;
-});
+    // This will hold the width of the current slide. Our slide takes 100% so clientWidth would be 100vw.
+    const scrollWidth = scrollContainer.clientWidth;
 
-//! Desktop carousel
+    // To calculate the current Slide
+    let index = Math.round(scrollLeft / scrollWidth);
 
-// These will hold the current background image
-const bgChanger = document.querySelector(".bg-changer");
+    if (index !== current) {
+      dotsArray[current].classList.remove("dot-style");
+      current = index;
+      dotsArray[current].classList.add("dot-style");
+    }
+  });
 
-// Necassary for the info-section
-const infoContainer = document.querySelector(".info-container");
-const title = document.querySelector(".info-container h3");
-const slogan = document.querySelector(".info-container h4");
-const desc = document.querySelector(".info-container p");
+  // To know if the clicked div is the same as the click before
+  let longTextSecond;
 
-// Needed for global Event Listener, since we used group in tailwind
-const carousel = document.querySelector(".carousel");
-const tabs = carousel.querySelectorAll(".tab");
+  scrollContainer.addEventListener("click", (event) => {
+    const currentDiv = event.target.closest(".snap-start");
+    const longText = currentDiv.querySelector(".long-text");
 
-carousel.addEventListener("click", (event) => {
-  const clickedTab = event.target.closest(".tab");
-  const tabBefore = document.querySelector(".tab-clicked-before");
+    if (longTextSecond === longText) {
+      longText.classList.toggle("hidden");
+      longText.classList.toggle("flex");
+      return;
+    }
 
-  if (tabBefore) {
-    // This ensures that it will get the same flex-ratio as all other unhovered-images
-    tabBefore.classList.remove("flex-[5]");
-    tabBefore.classList.add("flex-1");
-    tabBefore.classList.remove("tab-clicked-before");
+    if (longTextSecond) {
+      longTextSecond.classList.replace("flex", "hidden");
+    }
 
-    const hoverText = tabBefore.querySelector(".hover-text");
-    hoverText.classList.remove("opacity-100");
-    hoverText.classList.add("opacity-0");
-  }
-  // This ensures that the clicked image will appear larger than the other ones in the carousel
-  clickedTab.classList.add("tab-clicked-before");
-  clickedTab.classList.remove("flex-1");
-  clickedTab.classList.add("flex-[5]");
+    const textDiv = longText.querySelector("p");
 
-  const hoverText = clickedTab.querySelector(".hover-text");
-  hoverText.classList.remove("opacity-0");
-  hoverText.classList.add("opacity-100");
+    // Get the key out of the html element dataset
+    const key = currentDiv.dataset.key;
+    textDiv.textContent = tabInfo[key].desc;
 
-  // The key given by the data-key from the dom, will ensure to get the right key from the tabInfo array.
-  const key = clickedTab.dataset.key;
-  const img = clickedTab.querySelector("img").src;
+    longText.classList.replace("hidden", "flex");
+    longTextSecond = longText;
+  });
 
-  bgChanger.classList.replace("opacity-100", "opacity-0");
-  bgChanger.style.backgroundImage = `url('${img}')`;
-  bgChanger.classList.replace("opacity-0", "opacity-100");
+  // initialization to load first dot
+  dotsArray[current].classList.add("dot-style");
+}
 
-  infoContainer.classList.remove("opacity-0");
+function desktopCarousel() {
+  // These will hold the current background image
+  const bgChanger = document.querySelector(".bg-changer");
 
-  title.textContent = tabInfo[key].title;
-  slogan.textContent = tabInfo[key].slogan;
-  desc.textContent = tabInfo[key].desc;
-});
+  // Necassary for the info-section
+  const infoContainer = document.querySelector(".info-container");
+  const title = document.querySelector(".info-container h3");
+  const slogan = document.querySelector(".info-container h4");
+  const desc = document.querySelector(".info-container p");
 
-//? Method calls
+  // Needed for global Event Listener, since we used group in tailwind
+  const carousel = document.querySelector(".carousel");
+  const tabs = carousel.querySelectorAll(".tab");
 
-dotsArray[current].classList.add("dot-style");
-tabs[0].click();
+  carousel.addEventListener("click", (event) => {
+    const clickedTab = event.target.closest(".tab");
+    const tabBefore = document.querySelector(".tab-clicked-before");
+
+    if (tabBefore) {
+      // This ensures that it will get the same flex-ratio as all other unhovered-images
+      tabBefore.classList.remove("flex-[5]");
+      tabBefore.classList.add("flex-1");
+      tabBefore.classList.remove("tab-clicked-before");
+
+      const hoverText = tabBefore.querySelector(".hover-text");
+      hoverText.classList.remove("opacity-100");
+      hoverText.classList.add("opacity-0");
+    }
+    // This ensures that the clicked image will appear larger than the other ones in the carousel
+    clickedTab.classList.add("tab-clicked-before");
+    clickedTab.classList.remove("flex-1");
+    clickedTab.classList.add("flex-[5]");
+
+    const hoverText = clickedTab.querySelector(".hover-text");
+    hoverText.classList.remove("opacity-0");
+    hoverText.classList.add("opacity-100");
+
+    // The key given by the data-key from the dom, will ensure to get the right key from the tabInfo array.
+    const key = clickedTab.dataset.key;
+    const img = clickedTab.querySelector("img").src;
+
+    bgChanger.classList.replace("opacity-100", "opacity-0");
+    bgChanger.style.backgroundImage = `url('${img}')`;
+    bgChanger.classList.replace("opacity-0", "opacity-100");
+
+    infoContainer.classList.remove("opacity-0");
+
+    title.textContent = tabInfo[key].title;
+    slogan.textContent = tabInfo[key].slogan;
+    desc.textContent = tabInfo[key].desc;
+  });
+
+  // initialization to load first "clicked" slide
+  tabs[0].click();
+}

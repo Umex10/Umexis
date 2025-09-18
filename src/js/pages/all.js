@@ -1,15 +1,19 @@
 import { renderHeader } from "../modules/header.js";
 import { initApp } from "../modules/initApp.js";
 import * as gridItem from "../modules/gridItem.js";
+import { renderFooter } from "../modules/footer.js";
+import { lightSwitch } from "../modules/lightSwitch.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("header").innerHTML = renderHeader();
+  const header = document.getElementById("header");
+  const footer = document.getElementById("footer");
 
-  // Now hamburger + menu exist in DOM
+  if (header) header.innerHTML = renderHeader();
+  if (footer) footer.innerHTML = renderFooter();
 
   initApp();
+  lightSwitch();
+
+  // Initialization to load all the items
+  gridItem.addGridItem(0, gridItem.getNumberOfItems());
 });
-
-//? Method calls
-
-gridItem.addGridItem(0, gridItem.getNumberOfItems());

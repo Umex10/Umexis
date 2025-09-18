@@ -22,27 +22,27 @@
   <link rel="manifest" href="../favicon/site.webmanifest" />
 </head>
 
-<body class="m-0 min-h-screen bg-lightbg p-0 font-Roboto dark:bg-darkbg dark:text-white">
-  <header id="header" class="sticky top-0 z-10 border-b-2 border-gray-300 bg-lightbg dark:bg-darkbg"></header>
+<body class="min-h-screen font-Roboto bg-lightbg dark:bg-darkbg dark:text-white">
+  <header id="header" class="z-10 bg-lightbg border-b-2 border-gray-300 sticky top-0 dark:bg-darkbg"></header>
 
-  <main class="section-min-height w-full snap-y snap-mandatory overflow-hidden">
+  <main id="main" class="mx-auto max-w-8xl overflow-y-scroll section-min-height snap-y snap-mandatory scroll-mt-[81px]">
     <!-- Section 1: Online shopping with color yellow (dark-yellow) -->
-    <section class="section-min-height flex w-full snap-start flex-col md:flex-row" role="region"
+    <section class="flex flex-col w-full section-min-height snap-start md:flex-row" role="region"
       aria-label="Who We Are - Online Shopping">
       <div class="h-[70vh] w-full bg-cover bg-center md:h-auto md:min-h-full md:w-1/2">
         <picture>
           <source srcset="images/webp/Online.webp" type="image/webp" />
-          <img class="h-full w-full object-cover" src="images/jpg/Online.jpg"
+          <img class="object-cover h-full w-full" src="images/jpg/Online.jpg"
             alt="Shows that online shopping is very easy to do" loading="lazy" />
         </picture>
       </div>
       <div
-        class="flex flex-1 flex-col items-center justify-center bg-yellow-300/70 md:min-h-full md:w-1/2 md:py-0 dark:bg-yellow-900/50">
-        <div class="mx-5 flex flex-col items-start justify-start gap-2 md:mx-20">
-          <h2 class="text-left font-title text-2xl font-bold tracking-tight text-gray-900 md:text-4xl dark:text-white">
+        class="flex flex-1 flex-col bg-yellow-300/70 items-center justify-center dark:bg-yellow-900/50 md:min-h-full md:w-1/2 md:py-0">
+        <div class="flex flex-col mx-5 items-start justify-start gap-2 md:mx-20">
+          <h2 class="text-left font-title text-2xl font-bold tracking-tight text-gray-900 dark:text-white md:text-4xl">
             Who We Are
           </h2>
-          <p class="text-base font-light leading-relaxed text-gray-700 md:text-lg dark:text-gray-300">
+          <p class="text-base font-light leading-relaxed text-gray-700 dark:text-gray-300 md:text-lg">
             We are dedicated to making online shopping not just easy, but an
             enjoyable experience for everyone.
           </p>
@@ -51,22 +51,22 @@
     </section>
 
     <!-- Section 2: Quality products with color blue (sky) -->
-    <section class="section-min-height flex w-full snap-start flex-col md:flex-row-reverse" role="region"
+    <section class="flex flex-col w-full section-min-height snap-start md:flex-row-reverse" role="region"
       aria-label="Quality You Can Trust - Product Quality">
       <div class="h-[70vh] w-full bg-cover bg-center md:h-auto md:min-h-full md:w-1/2">
         <picture>
           <source srcset="images/webp/Quality.webp" type="image/webp" />
-          <img class="h-full w-full object-cover" src="images/jpg/Quality.jpg"
+          <img class="object-cover h-full w-full" src="images/jpg/Quality.jpg"
             alt="Close-up of a hand inspecting a product, symbolizing high quality" loading="lazy" />
         </picture>
       </div>
       <div
-        class="flex flex-1 flex-col items-center justify-center bg-sky-300/70 md:min-h-full md:w-1/2 md:py-0 dark:bg-sky-900/50">
-        <div class="mx-5 flex flex-col items-start justify-start gap-2 md:mx-20">
-          <h2 class="text-left font-title text-2xl font-bold tracking-tight text-gray-900 md:text-4xl dark:text-white">
+        class="flex flex-1 flex-col bg-sky-300/70 items-center justify-center dark:bg-sky-900/50 md:min-h-full md:w-1/2 md:py-0">
+        <div class="flex flex-col mx-5 items-start justify-start gap-2 md:mx-20">
+          <h2 class="text-left font-title text-2xl font-bold tracking-tight text-gray-900 dark:text-white md:text-4xl">
             Quality You Can Trust
           </h2>
-          <p class="text-base font-light leading-relaxed text-gray-700 md:text-lg dark:text-gray-300">
+          <p class="text-base font-light leading-relaxed text-gray-700 dark:text-gray-300 md:text-lg">
             Every product is handpicked and carefully inspected to ensure the
             best for you.
           </p>
@@ -75,22 +75,22 @@
     </section>
 
     <!-- Section 3: Delivery with color mint (dark-green) -->
-    <section class="section-min-height flex w-full snap-start flex-col md:flex-row" role="region"
+    <section class="flex flex-col w-full section-min-height snap-start md:flex-row" role="region"
       aria-label="Speedy & Reliable - Delivery">
       <div class="h-[70vh] w-full bg-cover bg-center md:h-auto md:min-h-full md:w-1/2">
         <picture>
           <source srcset="images/webp/Delivery.webp" type="image/webp" />
-          <img class="h-full w-full object-cover" src="images/jpg/Delivery.jpg"
+          <img class="object-cover h-full w-full" src="images/jpg/Delivery.jpg"
             alt="Delivery person handing over a package at a doorstep" loading="lazy" />
         </picture>
       </div>
       <div
-        class="flex flex-1 flex-col items-center justify-center bg-emerald-300/70 md:min-h-full md:w-1/2 md:py-0 dark:bg-emerald-900/50">
-        <div class="mx-5 flex flex-col items-start justify-start gap-2 md:mx-20">
-          <h2 class="text-left font-title text-2xl font-bold tracking-tight text-gray-900 md:text-4xl dark:text-white">
+        class="flex flex-1 flex-col bg-emerald-300/70 items-center justify-center dark:bg-emerald-900/50 md:min-h-full md:w-1/2 md:py-0">
+        <div class="flex flex-col mx-5 items-start justify-start gap-2 md:mx-20">
+          <h2 class="text-left font-title text-2xl font-bold tracking-tight text-gray-900 dark:text-white md:text-4xl">
             Speedy & Reliable
           </h2>
-          <p class="text-base font-light leading-relaxed text-gray-700 md:text-lg dark:text-gray-300">
+          <p class="text-base font-light leading-relaxed text-gray-700 dark:text-gray-300 md:text-lg">
             Get your orders delivered fast and safely, right to your doorstep.
           </p>
         </div>
@@ -98,22 +98,22 @@
     </section>
 
     <!-- Section 4: Customer-Service with color violet (gray) -->
-    <section class="section-min-height flex w-full snap-start flex-col md:flex-row-reverse" role="region"
+    <section class="flex flex-col w-full section-min-height snap-start md:flex-row-reverse" role="region"
       aria-label="We’re Here to Help - Customer Service">
       <div class="h-[70vh] w-full bg-cover bg-center md:h-auto md:min-h-full md:w-1/2">
         <picture>
           <source srcset="images/webp/Customer-Service.webp" type="image/webp" />
-          <img class="h-full w-full object-cover" src="images/jpg/Customer-Service.jpg"
+          <img class="object-cover h-full w-full" src="images/jpg/Customer-Service.jpg"
             alt="Customer service representative assisting a customer via headset" loading="lazy" />
         </picture>
       </div>
       <div
-        class="flex flex-1 flex-col items-center justify-center bg-violet-300/70 md:min-h-full md:w-1/2 md:py-0 dark:bg-stone-600/50">
-        <div class="mx-5 flex flex-col items-start justify-start gap-2 md:mx-20">
-          <h2 class="text-left font-title text-2xl font-bold tracking-tight text-gray-900 md:text-4xl dark:text-white">
+        class="flex flex-1 flex-col bg-violet-300/70 items-center justify-center dark:bg-stone-600/50 md:min-h-full md:w-1/2 md:py-0">
+        <div class="flex flex-col mx-5 items-start justify-start gap-2 md:mx-20">
+          <h2 class="text-left font-title text-2xl font-bold tracking-tight text-gray-900 dark:text-white md:text-4xl">
             We’re Here to Help
           </h2>
-          <p class="text-base font-light leading-relaxed text-gray-700 md:text-lg dark:text-gray-300">
+          <p class="text-base font-light leading-relaxed text-gray-700 dark:text-gray-300 md:text-lg">
             Our Customer-Service team is always ready to assist you, making
             shopping worry-free.
           </p>
@@ -122,26 +122,26 @@
     </section>
 
     <!-- Section 5: Carousel -->
-    <section class="section-min-height snap-start bg-gray-100 dark:bg-darkbg" role="region" aria-label="Our Journey">
+    <section class="bg-gray-100 section-min-height snap-start dark:bg-darkbg" role="region" aria-label="Our Journey">
       <!-- Our Journey - Mobile -->
-      <div class="flex h-full w-full flex-col justify-start gap-5 px-5 pt-20 md:hidden" aria-hidden="false">
+      <div class="flex flex-col h-full w-full px-5 pt-20 justify-start gap-5 md:hidden" aria-hidden="false">
         <!-- Title -->
         <h2 class="text-center text-7xl font-bold text-gray-900 dark:text-white">
-          <span class="mb-3 block">Our</span>
+          <span class="block mb-3">Our</span>
           <span class="block">Journey</span>
         </h2>
 
         <!-- "Slider (Carousel)" - wrapper -->
-        <div class="scroll-container mt-3 flex h-[40vh] w-full snap-x snap-mandatory gap-4 overflow-x-auto">
+        <div class="flex overflow-x-auto h-[40vh] w-full mt-3 scroll-container snap-x snap-mandatory gap-4">
           <!-- Image 1 - Team-->
-          <div class="relative h-full w-full flex-shrink-0 snap-start" data-key="team">
+          <div class="flex-shrink-0 h-full w-full relative snap-start" data-key="team">
             <picture>
               <source srcset="images/webp/Team.webp" type="image/webp" />
-              <img class="h-full w-full object-cover" src="images/jpg/Team.jpg"
+              <img class="object-cover h-full w-full will-change-transform" src="images/jpg/Team.jpg"
                 alt="Small founding team brainstorming ideas in an office" loading="lazy" />
             </picture>
             <div
-              class="absolute bottom-0 left-0 flex w-full items-end bg-gradient-to-t from-black/80 to-transparent px-5 pb-7">
+              class="flex w-full px-5 pb-7 bg-gradient-to-t from-black/80 to-transparent absolute bottom-0 left-0 items-end">
               <div class="flex flex-col">
                 <h3 class="text-2xl font-bold text-white drop-shadow-xl">
                   Humble Beginnings
@@ -153,20 +153,20 @@
               </div>
             </div>
             <div
-              class="z-15 long-text absolute bottom-0 left-0 hidden h-full w-full items-end bg-gradient-to-t from-black/100 to-black/30 px-5 pb-7">
+              class="z-15 hidden h-full w-full px-5 pb-7 bg-gradient-to-t from-black/100 to-black/30 long-text absolute bottom-0 left-0 items-end">
               <p class="text-base text-white drop-shadow-xl"></p>
             </div>
           </div>
 
           <!-- Image 2 - Warehouse (small)-->
-          <div class="relative h-full w-full flex-shrink-0 snap-start" data-key="warehouse">
+          <div class="flex-shrink-0 h-full w-full relative snap-start" data-key="warehouse">
             <picture>
               <source srcset="images/webp/Warehouse.webp" type="image/webp" />
-              <img class="h-full w-full object-cover" src="images/jpg/Warehouse.jpg"
+              <img class="object-cover h-full w-full will-change-transform" src="images/jpg/Warehouse.jpg"
                 alt="First warehouse building symbolizing the start of the company" loading="lazy" />
             </picture>
             <div
-              class="absolute bottom-0 left-0 flex w-full items-end bg-gradient-to-t from-black/80 to-transparent px-5 pb-7">
+              class="flex w-full px-5 pb-7 bg-gradient-to-t from-black/80 to-transparent absolute bottom-0 left-0 items-end">
               <div class="flex flex-col">
                 <h3 class="text-2xl font-bold text-white">First Steps</h3>
                 <p class="text-base text-white">
@@ -175,20 +175,20 @@
               </div>
             </div>
             <div
-              class="z-15 long-text absolute bottom-0 left-0 hidden h-full w-full items-end bg-gradient-to-t from-black/100 to-black/30 px-5 pb-7">
+              class="z-15 hidden h-full w-full px-5 pb-7 bg-gradient-to-t from-black/100 to-black/30 long-text absolute bottom-0 left-0 items-end">
               <p class="text-base text-white drop-shadow-xl"></p>
             </div>
           </div>
 
           <!-- Image 3 - Flower -->
-          <div class="relative h-full w-full flex-shrink-0 snap-start" data-key="flower">
+          <div class="flex-shrink-0 h-full w-full relative snap-start" data-key="flower">
             <picture>
               <source srcset="images/webp/Flower.webp" type="image/webp" />
-              <img class="h-full w-full object-cover" src="images/jpg/Flower.jpg"
+              <img class="object-cover h-full w-full will-change-transform" src="images/jpg/Flower.jpg"
                 alt="A blooming flower representing growth and progress" loading="lazy" />
             </picture>
             <div
-              class="absolute bottom-0 left-0 flex w-full items-end bg-gradient-to-t from-black/80 to-transparent px-5 pb-7">
+              class="flex w-full px-5 pb-7 bg-gradient-to-t from-black/80 to-transparent absolute bottom-0 left-0 items-end">
               <div class="flex flex-col">
                 <h3 class="text-2xl font-bold text-white">We’ve Grown</h3>
                 <p class="text-base text-white">
@@ -197,20 +197,20 @@
               </div>
             </div>
             <div
-              class="z-15 long-text absolute bottom-0 left-0 hidden h-full w-full items-end bg-gradient-to-t from-black/100 to-black/30 px-5 pb-7">
+              class="z-15 hidden h-full w-full px-5 pb-7 bg-gradient-to-t from-black/100 to-black/30 long-text absolute bottom-0 left-0 items-end">
               <p class="text-base text-white drop-shadow-xl"></p>
             </div>
           </div>
 
           <!-- Image 4 - Customer-Service -->
-          <div class="relative h-full w-full flex-shrink-0 snap-start" data-key="customerServiceHelping">
+          <div class="flex-shrink-0 h-full w-full relative snap-start" data-key="customerServiceHelping">
             <picture>
               <source srcset="images/webp/Customer-Service-Alone.webp" type="image/webp" />
-              <img class="h-full w-full object-cover" src="images/jpg/Customer-Service-Alone.jpg"
+              <img class="object-cover h-full w-full will-change-transform" src="images/jpg/Customer-Service-Alone.jpg"
                 alt="Customer service employee assisting clients" loading="lazy" />
             </picture>
             <div
-              class="absolute bottom-0 left-0 flex w-full items-end bg-gradient-to-t from-black/80 to-transparent px-5 pb-7">
+              class="flex w-full px-5 pb-7 bg-gradient-to-t from-black/80 to-transparent absolute bottom-0 left-0 items-end">
               <div class="flex flex-col">
                 <h3 class="text-2xl font-bold text-white">
                   Close to Customers
@@ -221,20 +221,20 @@
               </div>
             </div>
             <div
-              class="z-15 long-text absolute bottom-0 left-0 hidden h-full w-full items-end bg-gradient-to-t from-black/100 to-black/30 px-5 pb-7">
+              class="z-15 hidden h-full w-full px-5 pb-7 bg-gradient-to-t from-black/100 to-black/30 long-text absolute bottom-0 left-0 items-end">
               <p class="text-base text-white drop-shadow-xl"></p>
             </div>
           </div>
 
           <!-- Image 5 - Warehouse(full)-->
-          <div class="relative h-full w-full flex-shrink-0 snap-start" data-key="warehouseFull">
+          <div class="flex-shrink-0 h-full w-full relative snap-start" data-key="warehouseFull">
             <picture>
               <source srcset="images/webp/Warehouse-full.webp" type="image/webp" />
-              <img class="h-full w-full object-cover" src="images/jpg/Warehouse-full.jpg"
+              <img class="object-cover h-full w-full will-change-transform" src="images/jpg/Warehouse-full.jpg"
                 alt="Large modern warehouse showing company expansion" loading="lazy" />
             </picture>
             <div
-              class="absolute bottom-0 left-0 flex w-full items-end bg-gradient-to-t from-black/80 to-transparent px-5 pb-7">
+              class="flex w-full px-5 pb-7 bg-gradient-to-t from-black/80 to-transparent absolute bottom-0 left-0 items-end">
               <div class="flex flex-col">
                 <h3 class="text-2xl font-bold text-white">Stronger Today</h3>
                 <p class="text-base text-white">
@@ -244,7 +244,7 @@
               </div>
             </div>
             <div
-              class="z-15 long-text absolute bottom-0 left-0 hidden h-full w-full items-end bg-gradient-to-t from-black/100 to-black/30 px-5 pb-7">
+              class="z-15 hidden h-full w-full px-5 pb-7 bg-gradient-to-t from-black/100 to-black/30 long-text absolute bottom-0 left-0 items-end">
               <p class="text-base text-white drop-shadow-xl"></p>
             </div>
           </div>
@@ -253,57 +253,57 @@
         <!-- Slider Dots to keep track of current Slide -->
 
         <div id="slider-dots" class="flex w-full items-center justify-center gap-3">
-          <span class="dot h-3 w-3 bg-gray-500/90 transition-colors duration-200 dark:bg-[#1C3B5A]/70" role="button"
+          <span class="h-3 w-3 bg-gray-500/90 transition-colors dot duration-200 dark:bg-[#1C3B5A]/70" role="button"
             aria-label="Slide 1" tabindex="0"></span>
-          <span class="dot h-3 w-3 bg-gray-500/90 transition-colors duration-200 dark:bg-[#1C3B5A]/70" role="button"
+          <span class="h-3 w-3 bg-gray-500/90 transition-colors dot duration-200 dark:bg-[#1C3B5A]/70" role="button"
             aria-label="Slide 2" tabindex="0"></span>
-          <span class="dot h-3 w-3 bg-gray-500/90 transition-colors duration-200 dark:bg-[#1C3B5A]/70" role="button"
+          <span class="h-3 w-3 bg-gray-500/90 transition-colors dot duration-200 dark:bg-[#1C3B5A]/70" role="button"
             aria-label="Slide 3" tabindex="0"></span>
-          <span class="dot h-3 w-3 bg-gray-500/90 transition-colors duration-200 dark:bg-[#1C3B5A]/70" role="button"
+          <span class="h-3 w-3 bg-gray-500/90 transition-colors dot duration-200 dark:bg-[#1C3B5A]/70" role="button"
             aria-label="Slide 4" tabindex="0"></span>
-          <span class="dot h-3 w-3 bg-gray-500/90 transition-colors duration-200 dark:bg-[#1C3B5A]/70" role="button"
+          <span class="h-3 w-3 bg-gray-500/90 transition-colors dot duration-200 dark:bg-[#1C3B5A]/70" role="button"
             aria-label="Slide 5" tabindex="0"></span>
         </div>
       </div>
 
       <!--Our Journey - Desktop-->
-      <div class="relative hidden h-full w-full flex-col items-center gap-20 px-10 pt-10 md:flex" aria-hidden="true">
+      <div class="hidden flex-col h-full w-full px-10 pt-10 relative items-center gap-20 md:flex" aria-hidden="false">
         <!-- Actual bg-image -->
         <div
-          class="bg-changer absolute inset-0 z-0 h-full w-full bg-cover bg-center opacity-100 transition-opacity duration-1000">
+          class="z-0 h-full w-full bg-changer bg-cover bg-center opacity-100 transition-opacity absolute inset-0 duration-1000">
         </div>
 
         <!-- Shadow-overlay -->
         <div
-          class="shadow-changer absolute inset-0 z-0 h-full w-full bg-gradient-to-t from-black/45 via-black/60 to-black/45">
+          class="z-0 h-full w-full bg-gradient-to-t from-black/45 via-black/60 to-black/45 shadow-changer absolute inset-0">
         </div>
 
         <!-- Title -->
         <h2 class="z-10 text-center text-7xl font-bold text-white">
           Our Journey
         </h2>
-        <div class="z-11 flex w-full items-center justify-between gap-5">
+        <div class="flex w-full items-center justify-between gap-5">
           <!-- Information about current slide on the carousel-->
           <div
-            class="info-container relative flex w-2/5 flex-col items-start gap-5 rounded-lg bg-black/50 p-4 text-white">
+            class="flex flex-col w-2/5 p-4 text-white bg-black/50 rounded-lg info-container relative items-start gap-5">
             <h3 class="text-5xl font-extrabold leading-tight"></h3>
             <h4 class="text-2xl font-bold opacity-90"></h4>
             <p class="text-xl font-light"></p>
           </div>
 
           <!-- Carousel-wrapper -->
-          <div class="carousel flex h-[500px] w-3/5 flex-row items-center justify-center gap-5 overflow-hidden">
+          <div class="flex flex-row overflow-hidden h-[500px] w-3/5 carousel items-center justify-center gap-5">
             <!-- Image 1 - Team-->
             <div
-              class="tab group relative h-full flex-1 cursor-pointer rounded-xl transition-[flex] duration-500 will-change-[flex] hover:flex-[5]"
+              class="flex-1 h-full rounded-xl cursor-pointer transition-[flex] tab group relative duration-500 will-change-[flex] hover:flex-[5]"
               data-key="team">
               <picture>
                 <source srcset="images/webp/Team.webp" type="image/webp" />
-                <img class="h-full w-full object-cover" src="images/jpg/Team.jpg"
+                <img class="object-cover h-full w-full" src="images/jpg/Team.jpg"
                   alt="Small founding team brainstorming ideas in an office" loading="lazy" />
               </picture>
               <div
-                class="hover-text absolute inset-0 flex flex-col items-center justify-center gap-5 rounded-lg bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                class="flex flex-col bg-black bg-opacity-50 rounded-lg opacity-0 transition-opacity hover-text absolute inset-0 items-center justify-center gap-5 duration-300 group-hover:opacity-100">
                 <h3 class="max-w-full break-words text-center text-4xl font-bold text-white">
                   Humble Beginnings
                 </h3>
@@ -311,15 +311,15 @@
             </div>
             <!-- Image 2 - Warehouse (small)-->
             <div
-              class="tab group relative h-full flex-1 cursor-pointer rounded-xl transition-[flex] duration-500 will-change-[flex] hover:flex-[5]"
+              class="flex-1 h-full rounded-xl cursor-pointer transition-[flex] tab group relative duration-500 will-change-[flex] hover:flex-[5]"
               data-key="warehouse">
               <picture>
                 <source srcset="images/webp/Warehouse.webp" type="image/webp" />
-                <img class="h-full w-full object-cover" src="images/jpg/Warehouse.jpg"
+                <img class="object-cover h-full w-full" src="images/jpg/Warehouse.jpg"
                   alt="First warehouse building symbolizing the start of the company" loading="lazy" />
               </picture>
               <div
-                class="hover-text absolute inset-0 flex flex-col items-center justify-center gap-5 rounded-lg bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                class="flex flex-col bg-black bg-opacity-50 rounded-lg opacity-0 transition-opacity hover-text absolute inset-0 items-center justify-center gap-5 duration-300 group-hover:opacity-100">
                 <h3 class="max-w-full break-words text-center text-4xl font-bold text-white">
                   First Steps
                 </h3>
@@ -327,15 +327,15 @@
             </div>
             <!-- Image 3 - Flower -->
             <div
-              class="tab group relative h-full flex-1 cursor-pointer rounded-xl transition-[flex] duration-500 will-change-[flex] hover:flex-[5]"
+              class="flex-1 h-full rounded-xl cursor-pointer transition-[flex] tab group relative duration-500 will-change-[flex] hover:flex-[5]"
               data-key="flower">
               <picture>
                 <source srcset="images/webp/Flower.webp" type="image/webp" />
-                <img class="h-full w-full object-cover" src="images/jpg/Flower.jpg"
+                <img class="object-cover h-full w-full" src="images/jpg/Flower.jpg"
                   alt="A blooming flower representing growth and progress" loading="lazy" />
               </picture>
               <div
-                class="hover-text absolute inset-0 flex flex-col items-center justify-center gap-5 rounded-lg bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                class="flex flex-col bg-black bg-opacity-50 rounded-lg opacity-0 transition-opacity hover-text absolute inset-0 items-center justify-center gap-5 duration-300 group-hover:opacity-100">
                 <h3 class="max-w-full break-words text-center text-4xl font-bold text-white">
                   We’ve Grown
                 </h3>
@@ -343,15 +343,15 @@
             </div>
             <!-- Image 4 - Customer-Service -->
             <div
-              class="tab group relative h-full flex-1 cursor-pointer rounded-xl transition-[flex] duration-500 will-change-[flex] hover:flex-[5]"
+              class="flex-1 h-full rounded-xl cursor-pointer transition-[flex] tab group relative duration-500 will-change-[flex] hover:flex-[5]"
               data-key="customerServiceHelping">
               <picture>
                 <source srcset="images/webp/Customer-Service-Alone.webp" type="image/webp" />
-                <img class="h-full w-full object-cover" src="images/jpg/Customer-Service-Alone.jpg"
+                <img class="object-cover h-full w-full" src="images/jpg/Customer-Service-Alone.jpg"
                   alt="Customer service employee assisting clients" loading="lazy" />
               </picture>
               <div
-                class="hover-text absolute inset-0 flex flex-col items-center justify-center gap-5 rounded-lg bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                class="flex flex-col bg-black bg-opacity-50 rounded-lg opacity-0 transition-opacity hover-text absolute inset-0 items-center justify-center gap-5 duration-300 group-hover:opacity-100">
                 <h3 class="max-w-full break-words text-center text-4xl font-bold text-white">
                   Close to Customers
                 </h3>
@@ -359,15 +359,15 @@
             </div>
             <!-- Image 5 - Warehouse(full)-->
             <div
-              class="tab group relative h-full flex-1 cursor-pointer rounded-xl transition-[flex] duration-500 will-change-[flex] hover:flex-[5]"
+              class="flex-1 h-full rounded-xl cursor-pointer transition-[flex] tab group relative duration-500 will-change-[flex] hover:flex-[5]"
               data-key="warehouseFull">
               <picture>
                 <source srcset="images/webp/Warehouse-full.webp" type="image/webp" />
-                <img class="h-full w-full object-cover" src="images/jpg/Warehouse-full.jpg"
+                <img class="object-cover h-full w-full" src="images/jpg/Warehouse-full.jpg"
                   alt="Large modern warehouse showing company expansion" loading="lazy" />
               </picture>
               <div
-                class="hover-text absolute inset-0 flex flex-col items-center justify-center gap-5 rounded-lg bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                class="flex flex-col bg-black bg-opacity-50 rounded-lg opacity-0 transition-opacity hover-text absolute inset-0 items-center justify-center gap-5 duration-300 group-hover:opacity-100">
                 <h3 class="max-w-full break-words text-center text-4xl font-bold text-white">
                   Stronger Today
                 </h3>
@@ -377,8 +377,15 @@
         </div>
       </div>
     </section>
+    <!-- Footer needed here, because of the specific scrolling behaviour -->
+    <!-- Minimally adjusted footer classes to fit to the behaviour of about.html -->
+    <section class="flex flex-col section-min-height snap-start items-center justify-center gap-20">
+      <h2 class="hidden text-4xl font-bold md:flex">
+        That was about us. Navigate throught our E-commerce page!
+      </h2>
+      <footer id="footer" class="max-w-7xl mx-auto px-4 bg-lightbg dark:bg-darkbg"></footer>
+    </section>
   </main>
-
   <script type="module" src="js/pages/about.js"></script>
 </body>
 

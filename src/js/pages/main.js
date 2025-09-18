@@ -2,16 +2,21 @@ import * as fetchModule from "../modules/fetch.js";
 import { renderHeader } from "../modules/header.js";
 import { initApp } from "../modules/initApp.js";
 import * as gridItem from "../modules/gridItem.js";
-
+import { renderFooter } from "../modules/footer.js";
+import { lightSwitch } from "../modules/lightSwitch.js";
 //? This section will load the header, since the same header is needed in multiple pages
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("header").innerHTML = renderHeader();
+  const header = document.getElementById("header");
+  const footer = document.getElementById("footer");
 
-  // Now hamburger + menu exist in DOM
+  if (header) header.innerHTML = renderHeader();
+  if (footer) footer.innerHTML = renderFooter();
 
   initApp();
   initSlider();
+  showMoreAllButtons();
+  lightSwitch();
 });
 
 //? Slider mechanism to see the most recent items which are on sale from now on
@@ -167,7 +172,6 @@ function showMoreAllButtons() {
     clickCount++;
 
     if (amountItems == 5) {
-      console.log("Im in here!");
       seeAll.classList.toggle("hidden");
       seeMore.classList.toggle("flex-1");
       seeMore.classList.remove("px-10");
@@ -188,7 +192,3 @@ function showMoreAllButtons() {
     window.location.href = `item-all.html`;
   });
 }
-
-//? Method calls
-
-showMoreAllButtons();
