@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initSlider();
   showMoreAllButtons();
   lightSwitch();
+  initCards();
 });
 
 //? Slider mechanism to see the most recent items which are on sale from now on
@@ -159,11 +160,11 @@ function showMoreAllButtons() {
   } else if (numberOfItems < amountItems) {
     // only the remaining items will be displayed and seeMore will be hidden
 
-    gridItem.addGridItem(0, amountItems - numberOfItems);
+    gridItem.addGridItem(0, amountItems - numberOfItems, "more");
     seeMore.classList.toggle("hidden");
   } else {
     // normal behaviour
-    gridItem.addGridItem(0, amountItems);
+    gridItem.addGridItem(0, amountItems, "more");
   }
 
   //EventListeners for seeMore and seeAll
@@ -177,7 +178,7 @@ function showMoreAllButtons() {
       seeMore.classList.remove("px-10");
     }
     amountItems += 5;
-    gridItem.addGridItem(0, amountItems);
+    gridItem.addGridItem(0, amountItems, "more");
 
     if (amountItems >= numberOfItems) {
       seeMore.classList.toggle("hidden");
@@ -189,6 +190,18 @@ function showMoreAllButtons() {
   });
 
   seeAll.addEventListener("click", () => {
-    window.location.href = `item-all.html`;
+    window.location.href = `item-all.html?category=all`;
+  });
+}
+
+function initCards() {
+  const cards = document.querySelectorAll(".card");
+  cards.forEach((card) => {
+    const button = card.querySelector("button");
+    const key = card.dataset.key;
+
+    button.addEventListener("click", () => {
+      window.location.href = `item-all.html?category=${key}`;
+    });
   });
 }

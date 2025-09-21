@@ -14,6 +14,18 @@ document.addEventListener("DOMContentLoaded", () => {
   initApp();
   lightSwitch();
 
-  // Initialization to load all the items
-  gridItem.addGridItem(0, gridItem.getNumberOfItems());
+  // Get the category (=key) specified within the html element which is loading the html page
+  const query = new URLSearchParams(window.location.search);
+  const category = query.get("category");
+
+  // Set the header relating to the category inside item-all page
+  const headerGrid = document.getElementById("header-grid");
+  if (category === "all") {
+    headerGrid.textContent = "All products";
+  } else {
+    headerGrid.textContent = `${category.charAt(0).toUpperCase() + category.slice(1)} - All products`;
+  }
+
+  // Initialization to load "all" the items
+  gridItem.addGridItem(0, 0, category);
 });

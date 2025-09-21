@@ -3,11 +3,19 @@ import * as fetchModule from "../modules/fetch.js";
 
 //? To get all items of the API, since it is necessary for the addGridItem() method.
 
-export async function gridItems() {
+export async function gridItems(category) {
   try {
-    const gridArray = await fetchModule.fetchAPI(
-      "https://fakestoreapi.com/products",
-    );
+    let gridArray;
+    if (category === "all" || category === "more") {
+      gridArray = await fetchModule.fetchAPI(
+        "https://fakestoreapi.com/products",
+      );
+    } else {
+      gridArray = await fetchModule.fetchAPI(
+        `https://fakestoreapi.com/products/category/${category}`,
+      );
+    }
+
     return gridArray;
   } catch (error) {
     console.error("Couldn't fetch all items: ", error);
@@ -17,12 +25,18 @@ export async function gridItems() {
 
 //? Getting the items from the array (gridItems() return) in a specific range, which will then be added to the grid-layout
 
+// Necassary for other pages, so we can know if the gridlayout did return any items at all.
 let numberOfItems;
 
-export async function addGridItem(amountFrom, amountTo) {
+export async function addGridItem(amountFrom, amountTo, category) {
   let gridArray;
   try {
-    gridArray = await gridItems();
+    gridArray = await gridItems(category);
+
+    // To find out if we only have to add only 5+ items to the grid or all items.
+    if (category !== "more") {
+      amountTo = gridArray.length;
+    }
     numberOfItems = gridArray.length;
     // Sort in DESC ('featured items' mechanism related to 'most sold' number)
 
@@ -30,7 +44,6 @@ export async function addGridItem(amountFrom, amountTo) {
     const grid = document.getElementById("grid");
 
     // Always clear the innerHTML, before loading more items
-
     grid.innerHTML = "";
 
     gridArray.slice(amountFrom, amountTo).forEach((item) => {
