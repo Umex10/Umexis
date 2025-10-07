@@ -14,9 +14,11 @@
   }
 
   /* Since I used the same classes over and over inside the main.js file, so this wrapper is needed.
-     The !important is also necessary, because there is a issue where tailwind will not use this class on the darkmode */
-  .dot-style {
-    @apply animate-slide-span bg-orange-400 dark:bg-orange-400 !important;
+     The body is also necessary, because there is a issue where tailwind will not use this class on the darkmode 
+     With body it will get a higher specificity and will display the hover effect as well as the basic color */
+
+  body .dot-style {
+    @apply animate-slide-span bg-orange-400 dark:bg-orange-400;
   }
 
   /* For the variable*/
@@ -47,14 +49,20 @@
     overflow: hidden;
   }
 
+  /* Will make the images "moon" and "sun" bigger while hovering */
+  .toggle-mode .mode-btn.active img {
+    transform: scale(1.2);
+    filter: brightness(1.5);
+  }
+
   .toggle-mode .mode-btn img {
     transition:
       transform 0.3s,
       filter 0.3s;
   }
 
-  .toggle-mode .mode-btn.active img {
-    transform: scale(1.2);
-    filter: brightness(1.5);
+  /* Will pause the slide effect while hovering */
+  .testimonials-slider.group:hover {
+    animation-play-state: paused;
   }
 }

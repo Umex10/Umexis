@@ -4,6 +4,7 @@ import { initApp } from "../modules/initApp.js";
 import * as gridItem from "../modules/gridItem.js";
 import { renderFooter } from "../modules/footer.js";
 import { lightSwitch } from "../modules/lightSwitch.js";
+import { calculateRating } from "../modules/stars.js";
 //? This section will load the header, since the same header is needed in multiple pages
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -18,6 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
   showMoreAllButtons();
   lightSwitch();
   initCards();
+  cloneTestimonials();
+  initStars();
 });
 
 //? Slider mechanism to see the most recent items which are on sale from now on
@@ -190,9 +193,10 @@ function showMoreAllButtons() {
   });
 
   seeAll.addEventListener("click", () => {
-    window.location.href = `item-all.html?category=all`;
+    window.location.href = `item-all.html`;
   });
 }
+
 
 function initCards() {
   const cards = document.querySelectorAll(".card");
@@ -204,4 +208,33 @@ function initCards() {
       window.location.href = `item-all.html?category=${key}`;
     });
   });
+}
+
+
+
+//? This will fill the stars with a color based on the rating they gave.
+ function initStars() {
+    const testimonialsSlider = document.querySelector('.testimonials-slider');
+    const testimonials = Array.from(testimonialsSlider.children);
+
+    testimonials.forEach(testimonial => {
+      const rating = testimonial.querySelector('.testimonial-rating');
+      calculateRating(rating.textContent, testimonial);
+    });
+  }
+
+//? Necessary for the "infinite" scroll on the testimonials slider. We need to duplicate the <ul> list. 
+
+function cloneTestimonials() {
+  const testimonialsSlider = document.querySelector('.testimonials-slider');
+  const testimonials = Array.from(testimonialsSlider.children);
+
+  testimonials.forEach((testimonial) => {
+    const duplicateTestimonial = testimonial.cloneNode(true);
+    duplicateTestimonial.setAttribute("aria-hidden", true);
+    testimonialsSlider.appendChild(duplicateTestimonial);
+  });
+
+ 
+  
 }

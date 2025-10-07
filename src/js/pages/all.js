@@ -16,7 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Get the category (=key) specified within the html element which is loading the html page
   const query = new URLSearchParams(window.location.search);
-  const category = query.get("category");
+  // To ensure that the user can also click on the nav item "shop" to gain access to "all" items
+  const category = query.get("category") || "all";
+  
 
   // Set the header relating to the category inside item-all page
   const headerGrid = document.getElementById("header-grid");

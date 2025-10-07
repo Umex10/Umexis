@@ -2,10 +2,10 @@
 
 export function calculateRating(rating, wrapper) {
   const replacer = wrapper.querySelectorAll(".star");
-  // Gets the first 3 from 3.3
+  // Gets the first occurence 3 from 3.3
   const whole = Math.floor(rating);
 
-  // Gets 0.3 from 3.3
+  // Gets the fractional part of the double number. 3.3 -> 0.3
   const fractional = rating - whole;
 
   replacer.forEach((star, i) => {
