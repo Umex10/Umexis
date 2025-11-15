@@ -12,7 +12,7 @@ module.exports = {
       },
       colors: {
         lightbg: "#FDFDFD", // Light Mode Hintergrund
-        darkbg: "#1E293B", // Dark Mode Hintergrund
+        darkbg: "#2e1065", // Dark Mode Hintergrund (deep violet to match the new theme)
       },
       keyframes: {
         "open-menu": {

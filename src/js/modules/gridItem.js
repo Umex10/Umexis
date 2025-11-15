@@ -103,13 +103,13 @@ export function createGridItem(item) {
       class="object-contain w-full h-full transition-transform duration-300 group-hover:scale-105" />
     <button
   class="button-heart group/btn absolute right-3 top-3 w-7 h-7 md:w-10 md:h-10 rounded-full bg-white dark:bg-sky-900 transition-transform duration-300 hover:scale-105">
-  <svg class="fill-heart m-auto w-4 h-4 md:w-6 md:h-6 text-orange-500 group-hover/btn:text-orange-400 transition-colors"
+  <svg class="fill-heart m-auto w-4 h-4 md:w-6 md:h-6 text-violet-400 group-hover/btn:text-violet-500 transition-colors"
     fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <path stroke-linecap="round" stroke-linejoin="round"
       d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z">
     </path>
   </svg> <svg
-    class="empty-heart hidden m-auto w-4 h-4 md:w-6 md:h-6 text-orange-500 group-hover/btn:text-orange-400 transition-colors"
+    class="empty-heart hidden m-auto w-4 h-4 md:w-6 md:h-6 text-violet-400 group-hover/btn:text-violet-500 transition-colors"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
     <path
       d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />

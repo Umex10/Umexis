@@ -19,7 +19,7 @@ export function renderFooter() {
           <a href="index.html">
             <h2 class="group cursor-pointer text-[32px] text-center font-bold" tabindex="0">
               <span
-                class="font-Bitcount text-4xl text-orange-400 transition-colors duration-200 active:text-orange-800 group-hover:text-orange-500">U</span>mexis
+                class="font-Bitcount text-4xl text-violet-400 transition-colors duration-200 active:text-violet-600 group-hover:text-violet-500">U</span>mexis
             </h2>
             <a/>
         </section>
@@ -30,7 +30,7 @@ export function renderFooter() {
           <!-- Icon 1 -->
           <a class="group cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"
-              class="w-6 h-6 md:w-8 md:h-8 stroke-black dark:stroke-white group-hover:stroke-orange-400 transition-transform duration-300 transform group-hover:scale-110">
+              class="w-6 h-6 md:w-8 md:h-8 stroke-black dark:stroke-white group-hover:stroke-violet-500 transition-transform duration-300 transform group-hover:scale-110">
               <path
                 d="M83,23a22,22,0,0,1,22,22V83a22,22,0,0,1-22,22H45A22,22,0,0,1,23,83V45A22,22,0,0,1,45,23H83m0-8H45A30.09,30.09,0,0,0,15,45V83a30.09,30.09,0,0,0,30,30H83a30.09,30.09,0,0,0,30-30V45A30.09,30.09,0,0,0,83,15Z"
                 fill="none" stroke-width="6.5" />
@@ -42,7 +42,7 @@ export function renderFooter() {
           <!-- Icon 2 -->
           <a class="group cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"
-              class="w-6 h-6 md:w-8 md:h-8  stroke-black dark:stroke-white group-hover:stroke-orange-400 transition-transform duration-300 transform group-hover:scale-110">
+              class="w-6 h-6 md:w-8 md:h-8  stroke-black dark:stroke-white group-hover:stroke-violet-500 transition-transform duration-300 transform group-hover:scale-110">
               <path
                 d="M64,32.29c.23,0,22.92,0,37.9,1.08l.66.06c2,.18,4.16.39,6.28,2.58l0,0,0,0c1,1,2.14,4.54,2.53,7.07a156,156,0,0,1,1,16.71v8.24a156.82,156.82,0,0,1-1,16.72c-.37,2.47-1.54,6.06-2.52,7l0,0,0,0c-2.11,2.18-4.32,2.39-6.27,2.58l-.68.07c-14.72,1-36.89,1.1-37.89,1.1-1.15,0-28-.27-36.57-1-.51-.08-1-.15-1.58-.21-2.28-.27-4.87-.58-6.73-2.51l0,0,0,0c-1-1-2.14-4.53-2.52-7.05a156,156,0,0,1-1-16.71V59.86a156.79,156.79,0,0,1,1-16.71c.39-2.55,1.55-6.09,2.53-7.07l0,0,0,0c2.12-2.19,4.33-2.39,6.28-2.58l.66-.06c15-1.07,37.67-1.08,37.89-1.08H64m0-6.5H64s-23.09,0-38.48,1.1c-2.15.25-6.83.27-11,4.59-3.29,3.3-4.37,10.79-4.37,10.79A162.25,162.25,0,0,0,9,59.86V68.1a162.19,162.19,0,0,0,1.1,17.59s1.07,7.49,4.37,10.78c4.19,4.32,9.68,4.19,12.13,4.65,8.8.83,37.4,1.09,37.4,1.09s23.11,0,38.51-1.13c2.15-.25,6.84-.28,11-4.6,3.29-3.29,4.37-10.78,4.37-10.78A162.26,162.26,0,0,0,119,68.11V59.87a162.27,162.27,0,0,0-1.1-17.59s-1.07-7.49-4.37-10.79c-4.18-4.32-8.87-4.35-11-4.59C87.11,25.79,64,25.79,64,25.79Z"
                 fill="none" stroke-width="6.5" />
@@ -53,7 +53,7 @@ export function renderFooter() {
           <!-- Icon 3 -->
           <a class="group cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"
-              class="w-6 h-6 md:w-8 md:h-8 dark:fill-white stroke-black dark:stroke-white group-hover:fill-orange-400 transition-transform duration-300 transform group-hover:scale-110">
+              class="w-6 h-6 md:w-8 md:h-8 dark:fill-white stroke-black dark:stroke-white group-hover:fill-violet-500 transition-transform duration-300 transform group-hover:scale-110">
               <path
                 d="M106.09,20.5a1.41,1.41,0,0,1,1.41,1.41v84.19a1.41,1.41,0,0,1-1.41,1.41H21.91a1.41,1.41,0,0,1-1.41-1.41V21.91a1.41,1.41,0,0,1,1.41-1.41h84.19m0-6.5H21.91A7.91,7.91,0,0,0,14,21.91v84.19A7.91,7.91,0,0,0,21.91,114h84.19a7.91,7.91,0,0,0,7.91-7.91V21.91A7.91,7.91,0,0,0,106.09,14Z" />
               <rect height="41.73" width="11.73" x="37.27" y="50.4" />
@@ -66,7 +66,7 @@ export function renderFooter() {
           <!-- Icon 4 -->
           <a class="group cursor-pointer">
             <svg data-name="Layer 1" viewBox="0 0 128 128"
-              class="w-6 h-6 md:w-8 md:h-8  stroke-black dark:stroke-white group-hover:stroke-orange-400 transition-transform duration-300 transform group-hover:scale-110">
+              class="w-6 h-6 md:w-8 md:h-8  stroke-black dark:stroke-white group-hover:stroke-violet-500 transition-transform duration-300 transform group-hover:scale-110">
               <path
                 d="M64,20.5c24,0,43.5,17.76,43.5,39.59S88,99.69,64,99.69a47.6,47.6,0,0,1-11.71-1.46l-2.38-.6-2.18,1.12-9,4.63V92.44l-2.56-2C26.2,82.93,20.5,71.85,20.5,60.09,20.5,38.26,40,20.5,64,20.5M64,14C36.39,14,14,34.64,14,60.09c0,14.32,7.08,27.11,18.19,35.57V114l18.5-9.48A54,54,0,0,0,64,106.19c27.61,0,50-20.64,50-46.09S91.61,14,64,14Z"
                 fill="none" stroke-width="6.5" stroke-miterlimit="10" />
@@ -89,52 +89,52 @@ export function renderFooter() {
           <!-- Navigation 1 - Shop-->
           <nav class="flex flex-col gap-2" aria-label="Shop">
             <h2 class="text-black dark:text-white font-bold uppercase">Shop</h2>
-            <a class="text-gray-500 transition-colors duration-200 hover:text-orange-500 active:text-orange-800"
+            <a class="text-gray-500 transition-colors duration-200 hover:text-violet-500 active:text-violet-600"
               href="#">New Arrivals</a>
-            <a class="text-gray-500 transition-colors duration-200 hover:text-orange-500 active:text-orange-800"
+            <a class="text-gray-500 transition-colors duration-200 hover:text-violet-500 active:text-violet-600"
               href="#">Best Sellers</a>
-            <a class="text-gray-500 transition-colors duration-200 hover:text-orange-500 active:text-orange-800"
+            <a class="text-gray-500 transition-colors duration-200 hover:text-violet-500 active:text-violet-600"
               href="#">Gift Cards</a>
-            <a class="text-gray-500 transition-colors duration-200 hover:text-orange-500 active:text-orange-800"
+            <a class="text-gray-500 transition-colors duration-200 hover:text-violet-500 active:text-violet-600"
               href="#">Special Sales</a>
           </nav>
 
           <!-- Navigation 2 - Customer-Service -->
           <nav class="flex flex-col gap-2" aria-label="Customer-Service">
             <h2 class="text-black dark:text-white font-bold uppercase">Customer-Service</h2>
-            <a class="text-gray-500 transition-colors duration-200 hover:text-orange-500 active:text-orange-800"
+            <a class="text-gray-500 transition-colors duration-200 hover:text-violet-500 active:text-violet-600"
               href="#">Contact Us</a>
-            <a class="text-gray-500 transition-colors duration-200 hover:text-orange-500 active:text-orange-800"
+            <a class="text-gray-500 transition-colors duration-200 hover:text-violet-500 active:text-violet-600"
               href="#">Shipping & Delivery</a>
-            <a class="text-gray-500 transition-colors duration-200 hover:text-orange-500 active:text-orange-800"
+            <a class="text-gray-500 transition-colors duration-200 hover:text-violet-500 active:text-violet-600"
               href="#">Returns & Exchanges</a>
-            <a class="text-gray-500 transition-colors duration-200 hover:text-orange-500 active:text-orange-800"
+            <a class="text-gray-500 transition-colors duration-200 hover:text-violet-500 active:text-violet-600"
               href="#">FAQ</a>
           </nav>
 
           <!-- Navigation 3 - Company -->
           <nav class=" flex flex-col gap-2" aria-label="Company">
             <h2 class="text-black dark:text-white font-bold uppercase">Company</h2>
-            <a class="text-gray-500 transition-colors duration-200 hover:text-orange-500 active:text-orange-800"
+            <a class="text-gray-500 transition-colors duration-200 hover:text-violet-500 active:text-violet-600"
               href="about.html">About Us</a>
-            <a class="text-gray-500 transition-colors duration-200 hover:text-orange-500 active:text-orange-800"
+            <a class="text-gray-500 transition-colors duration-200 hover:text-violet-500 active:text-violet-600"
               href="#">Careers</a>
-            <a class="text-gray-500 transition-colors duration-200 hover:text-orange-500 active:text-orange-800"
+            <a class="text-gray-500 transition-colors duration-200 hover:text-violet-500 active:text-violet-600"
               href="#">Sustainability</a>
-            <a class="text-gray-500 transition-colors duration-200 hover:text-orange-500 active:text-orange-800"
+            <a class="text-gray-500 transition-colors duration-200 hover:text-violet-500 active:text-violet-600"
               href="#">Press</a>
           </nav>
 
           <!-- Navigation 4 - Legal -->
           <nav class=" flex flex-col gap-2" aria-label="Legal">
             <h2 class="text-black dark:text-white font-bold uppercase">Legal</h2>
-            <a class="text-gray-500 transition-colors duration-200 hover:text-orange-500 active:text-orange-800"
+            <a class="text-gray-500 transition-colors duration-200 hover:text-violet-500 active:text-violet-600"
               href="#">Privacy Policy</a>
-            <a class="text-gray-500 transition-colors duration-200 hover:text-orange-500 active:text-orange-800"
+            <a class="text-gray-500 transition-colors duration-200 hover:text-violet-500 active:text-violet-600"
               href="#">Terms of Service</a>
-            <a class="text-gray-500 transition-colors duration-200 hover:text-orange-500 active:text-orange-800"
+            <a class="text-gray-500 transition-colors duration-200 hover:text-violet-500 active:text-violet-600"
               href="#">Refund Policy</a>
-            <a class="text-gray-500 transition-colors duration-200 hover:text-orange-500 active:text-orange-800"
+            <a class="text-gray-500 transition-colors duration-200 hover:text-violet-500 active:text-violet-600"
               href="#">Cookie Settings</a>
           </nav>
         </div>
@@ -144,18 +144,18 @@ export function renderFooter() {
         aria-label="Small-details">
         <!-- Jump back to the header link -->
         <a href="#main"
-          class="back-to-top flex items-center gap-2 rounded-xl text-sm py-0.5 px-2 h-8 md:h-12 group bg-gray-300 dark:bg-gray-500 hover:bg-orange-500 active:bg-orange-600 dark:hover:bg-orange-500 dark:active:bg-orange-600 transition-all duration-300">
+          class="back-to-top flex items-center gap-2 rounded-xl text-sm py-0.5 px-2 h-8 md:h-12 group bg-gray-300 dark:bg-gray-500 hover:bg-violet-500 active:bg-violet-600 dark:hover:bg-violet-500 dark:active:bg-violet-600 transition-all duration-300">
           <span
-            class="text-2xl md:text-3xl font-extrabold text-orange-400 group-hover:text-black transition-all duration-300">↑</span>
+            class="text-2xl md:text-3xl font-extrabold text-violet-400 group-hover:text-black transition-all duration-300">↑</span>
           <span class="text-xs md:text-lg">Back to the start</span>
         </a>
 
         <!-- Wrapper of light-switch -->
         <div
           class="toggle-mode relative flex flex-row rounded-full group/setmode bg-gray-300 dark:bg-gray-500 hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 transition-all ease-in-out duration-300 w-16 h-8 md:w-24 md:h-12 md:order-3 cursor-pointer overflow-hidden">
-          <!-- Setting orange circle (Set mode) -->
+          <!-- Setting violet circle (Set mode) -->
           <div
-            class="set-mode absolute top-1 left-1 w-1/2 h-6 md:h-10 bg-orange-400   group-hover/setmode:bg-orange-500  group-active/setmode:bg-orange-600 dark:group-hover/setmode:bg-orange-500  dark:group-active/setmode:bg-orange-600  rounded-full transition-all duration-300 pointer-events-auto">
+            class="set-mode absolute top-1 left-1 w-1/2 h-6 md:h-10 bg-violet-400   group-hover/setmode:bg-violet-500  group-active/setmode:bg-violet-600 dark:group-hover/setmode:bg-violet-500  dark:group-active/setmode:bg-violet-600  rounded-full transition-all duration-300 pointer-events-auto">
           </div>
 
           <!-- Buttons - Light switch - icons -->

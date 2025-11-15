@@ -18,7 +18,7 @@
      With body it will get a higher specificity and will display the hover effect as well as the basic color */
 
   body .dot-style {
-    @apply animate-slide-span bg-orange-400 dark:bg-orange-400;
+    @apply animate-slide-span bg-violet-400 dark:bg-violet-400;
   }
 
   /* For the variable*/
@@ -33,18 +33,18 @@
 
   /* Filled star + hover classes */
   .star-filled {
-    @apply text-orange-400 transition-transform duration-300 ease-in-out group-hover:scale-105 group-hover:[text-shadow:0_0_10px_#f97316,0_0_20px_#fb923c];
+    @apply text-violet-400 transition-transform duration-300 ease-in-out group-hover:scale-105 group-hover:[text-shadow:0_0_10px_#a78bfa,0_0_20px_#c4b5fd];
   }
 
   /* filled star, but only with the width (fractional part) + hover classes */
   .star-fill-fractional {
-    @apply relative transition-transform duration-300 ease-in-out group-hover:scale-105 group-hover:[text-shadow:0_0_10px_#f97316,0_0_20px_#fb923c];
+    @apply relative transition-transform duration-300 ease-in-out group-hover:scale-105 group-hover:[text-shadow:0_0_10px_#a78bfa,0_0_20px_#c4b5fd];
   }
 
   /* This provides us with a second layer which sits on top of the first layer. So it appears that one star is fractionally filled! */
   .star-fill-fractional::before {
     content: "★"; /* overlay star */
-    @apply absolute overflow-hidden text-orange-400;
+    @apply absolute overflow-hidden text-violet-400;
     width: var(--star-width, 50%); /* fills half the star (default value) */
     overflow: hidden;
   }

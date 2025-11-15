@@ -15,7 +15,7 @@ export function calculateRating(rating, wrapper) {
     } else if (i === whole && fractional > 0) {
       star.classList.add("star-fill-fractional");
 
-      // Calculate how much of the last star should be filled with the orange color.
+      // Calculate how much of the last star should be filled with the violet color.
       star.style.setProperty(
         "--star-width",
         `${Math.round(fractional * 100)}%`,

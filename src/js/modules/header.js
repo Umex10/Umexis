@@ -8,15 +8,15 @@ export function renderHeader() {
       <a href="index.html">
       <h1 class="group cursor-pointer text-[32px] font-bold"  tabindex="0">
         <span
-          class="font-Bitcount text-4xl text-orange-400 transition-colors duration-200 active:text-orange-800 group-hover:text-orange-500">U</span>mexis
+          class="font-Bitcount text-4xl text-violet-400 transition-colors duration-200 active:text-violet-600 group-hover:text-violet-500">U</span>mexis
       </h1><a/>
 
       <!-- Nav Bar (Desk only) -->
       <nav class="hidden flex-1 justify-center space-x-8 text-xl md:flex" role="navigation" aria-label="Main navigation">
-        <a href="index.html" class="transition-colors duration-200 hover:text-orange-500 active:text-orange-800"  tabindex="0">Home</a>
-        <a href="item-all.html" class="transition-colors duration-200 hover:text-orange-500 active:text-orange-800"  tabindex="0">Shop</a>
-        <a href="about.html" class="transition-colors duration-200 hover:text-orange-500 active:text-orange-800"  tabindex="0">About Us</a>
-        <a href="#" class="transition-colors duration-200 hover:text-orange-500 active:text-orange-800"  tabindex="0">Contact</a>
+        <a href="index.html" class="transition-colors duration-200 hover:text-violet-500 active:text-violet-600"  tabindex="0">Home</a>
+        <a href="item-all.html" class="transition-colors duration-200 hover:text-violet-500 active:text-violet-600"  tabindex="0">Shop</a>
+        <a href="about.html" class="transition-colors duration-200 hover:text-violet-500 active:text-violet-600"  tabindex="0">About Us</a>
+        <a href="#" class="transition-colors duration-200 hover:text-violet-500 active:text-violet-600"  tabindex="0">Contact</a>
       </nav>
 
       <!-- Right Buttons -->
@@ -24,13 +24,13 @@ export function renderHeader() {
         <button id="hamburger-button" class="group relative h-8 w-8 cursor-pointer text-3xl md:hidden">
           <!-- Hamburger -->
           <div
-            class="absolute top-4 -mt-0.5 h-1 w-7 rounded bg-black before:absolute before:h-1 before:w-7 before:-translate-x-3.5 before:-translate-y-2.5 before:rounded before:bg-black before:transition-all before:duration-500 before:content-[''] after:absolute after:h-1 after:w-7 after:-translate-x-3.5 after:translate-y-2.5 after:rounded after:bg-black after:transition-all after:duration-500 after:content-[''] active:bg-orange-800 active:before:bg-orange-800 active:after:bg-orange-800 group-hover:bg-orange-500 group-hover:before:bg-orange-500 group-hover:after:bg-orange-500 dark:bg-white before:dark:bg-white after:dark:bg-white">
+            class="absolute top-4 -mt-0.5 h-1 w-7 rounded bg-black before:absolute before:h-1 before:w-7 before:-translate-x-3.5 before:-translate-y-2.5 before:rounded before:bg-black before:transition-all before:duration-500 before:content-[''] after:absolute after:h-1 after:w-7 after:-translate-x-3.5 after:translate-y-2.5 after:rounded after:bg-black after:transition-all after:duration-500 after:content-[''] active:bg-violet-600 active:before:bg-violet-600 active:after:bg-violet-600 group-hover:bg-violet-500 group-hover:before:bg-violet-500 group-hover:after:bg-violet-500 dark:bg-white before:dark:bg-white after:dark:bg-white">
           </div>
         </button>
         <!-- Lupe -->
         <button class="group">
           <svg xmlns="http://www.w3.org/2000/svg"
-            class="h-8 w-8 transition-colors duration-200 group-hover:text-orange-500 group-active:text-orange-800"
+            class="h-8 w-8 transition-colors duration-200 group-hover:text-violet-500 group-active:text-violet-600"
             fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M21 21l-4.35-4.35m1.1-5.65a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -39,13 +39,13 @@ export function renderHeader() {
         <!-- Account -->
         <button class="group flex flex-row items-center">
           <svg xmlns="http://www.w3.org/2000/svg"
-            class="h-8 w-8 transition-colors duration-200 group-hover:text-orange-500 group-active:text-orange-800"
+            class="h-8 w-8 transition-colors duration-200 group-hover:text-violet-500 group-active:text-violet-600"
             fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM6 20v-2a6 6 0 0112 0v2" />
           </svg>
           <span
-            class="hidden text-xl transition-colors duration-200 group-hover:text-orange-500 group-active:text-orange-800 md:inline">Account</span>
+            class="hidden text-xl transition-colors duration-200 group-hover:text-violet-500 group-active:text-violet-600 md:inline">Account</span>
         </button>
       </div>
     </section>
@@ -55,14 +55,14 @@ export function renderHeader() {
       <nav class="flex w-full flex-col items-center justify-center space-y-10 py-8 text-4xl text-white"
         role="navigation" aria-label="Mobile menu navigation">
         <a href="index.html"
-          class="w-full text-center transition-colors duration-200 hover:text-orange-500 active:text-orange-800">Home</a>
+          class="w-full text-center transition-colors duration-200 hover:text-violet-500 active:text-violet-600">Home</a>
         <a href="item-all.html"
-          class="w-full text-center transition-colors duration-200 hover:text-orange-500 active:text-orange-800">Shop</a>
+          class="w-full text-center transition-colors duration-200 hover:text-violet-500 active:text-violet-600">Shop</a>
         <a href="about.html"
-          class="w-full text-center transition-colors duration-200 hover:text-orange-500 active:text-orange-800">About
+          class="w-full text-center transition-colors duration-200 hover:text-violet-500 active:text-violet-600">About
           Us</a>
         <a href=""
-          class="w-full text-center transition-colors duration-200 hover:text-orange-500 active:text-orange-800">Contact</a>
+          class="w-full text-center transition-colors duration-200 hover:text-violet-500 active:text-violet-600">Contact</a>
       </nav>
     </section>
 
